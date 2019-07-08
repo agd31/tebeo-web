@@ -23,6 +23,22 @@
   color: #61dafb;
 }
 
+.registerUser{
+  color:red;
+  border:blue;
+  border-style: solid;
+  background-color: chartreuse;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin-right:20px;
+  margin-left:260px;
+}
+
+.registerLeft{
+align-items: row;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
