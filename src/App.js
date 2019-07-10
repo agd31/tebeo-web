@@ -7,7 +7,10 @@ import './App.css';
 import Header from './components/misc/Header.js';
 import Navbar from './components/misc/Navbar.js';
 import Comic from './components/comics/Comic.js';
-import Home from './components/Home.js'
+import Home from './components/Home.js';
+import Register from './components/auth/Register.js';
+import Login from './components/auth/Login.js';
+import Logout from './components/auth/Logout.js';
 
 
 function App() {
@@ -20,6 +23,9 @@ function App() {
           <Switch>
             <Route exact path="/"  component={Home}/>
             <Route exact path="/comics/:id" component={Comic} />
+            <Route exact path="/register" component={Register}/>
+            <Route exact path="/login" component={Login}/>
+            <Route exact path="/logout" component={Logout}/>
           </Switch>
 </main>
  
