@@ -42,7 +42,7 @@ const Navbar = () => (
             <NavLink className="nav-link registerLeft" to="/login">Login</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link registerLeft" to="/logout" title="Logout">Logout</NavLink>
+            <NavLink className="nav-link registerLeft" to="/logout" title="Logout"><i className="fas fa-sign-out-alt fa-lg"></i></NavLink>
           </li>
           </div>
         </ul>
