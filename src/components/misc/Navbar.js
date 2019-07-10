@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom'
 
+
 const Navbar = () => (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container">
@@ -41,7 +42,7 @@ const Navbar = () => (
             <NavLink className="nav-link registerLeft" to="/login">Login</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link registerLeft" to="/logout">Logout</NavLink>
+            <NavLink className="nav-link registerLeft" to="/logout" title="Logout">Logout</NavLink>
           </li>
           </div>
         </ul>

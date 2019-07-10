@@ -10,7 +10,7 @@ import Comic from './components/comics/Comic.js';
 import Home from './components/Home.js';
 import Register from './components/auth/Register.js';
 import Login from './components/auth/Login.js';
-import Logout from './components/auth/Logout.js';
+
 
 
 function App() {
@@ -25,7 +25,6 @@ function App() {
             <Route exact path="/comics/:id" component={Comic} />
             <Route exact path="/register" component={Register}/>
             <Route exact path="/login" component={Login}/>
-            <Route exact path="/logout" component={Logout}/>
           </Switch>
 </main>
  
