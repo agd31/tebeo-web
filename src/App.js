@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Switch, Route  } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'font-awesome/css/font-awesome.min.css'
+import '../node_modules/fontawesome-react/css/all.min.css';
 import './App.css';
 import Header from './components/misc/Header.js';
 import Navbar from './components/misc/Navbar.js';
@@ -25,6 +25,7 @@ function App() {
             <Route exact path="/comics/:id" component={Comic} />
             <Route exact path="/register" component={Register}/>
             <Route exact path="/login" component={Login}/>
+            
           </Switch>
 </main>
  

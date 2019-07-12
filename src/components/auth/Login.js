@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Redirect, Link } from 'react-router-dom'
 import authService from '../../services/AuthService'
-import { withAuthConsumer } from '../../contexts/AuthStore';
+import { withAuthContext} from '../../contexts/AuthStore';
 
 
 const EMAIL_PATTERN = /^[a-zA-Z0-9.!#$%&‘+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/
@@ -29,12 +29,17 @@ class Login extends Component {
   state = {
     user: {
       email: '',
-      password: ''
+      password: '',
+      id:''
+     
     },
     errors: {},
     touch: {},
     isAuthenticated: false
   }
+
+
+
 
   handleChange = (event) => {
     const { name, value } = event.target;
@@ -60,69 +65,71 @@ class Login extends Component {
     })
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
-    if (this.isValid()) {
-      authService.authenticate(this.state.user)
-        .then(
-          (user) => {
-            this.setState({ isAuthenticated: true }, () => {
-              this.props.onUserChange(user);
-            })
-          },
-          (error) => {
-            const { message, errors } = error.response.data;
-            this.setState({
-              errors: {
-                ...this.state.errors,
-                ...errors,
-                password: !errors && message
-              }
-            })
-          }
-        )
-    }
+  handleSubmit = (e) => {
+    e.preventDefault()
+    const { user } = this.state
+    authService.authenticate(user)
+      .then(
+        response => {
+          //this.props.onUserLogin(response)
+          this.setState({ 
+            isAuthenticated: true,
+            id: user.id
+          })
+        },
+        error => {
+          this.setState({
+            ...this.state,
+            errors: {
+              ...this.state.errors,
+              name: true,
+              password: true
+            },
+          })
+      }
+      )
   }
+
+
 
   isValid = () => {
     return !Object.keys(this.state.user)
       .some(attr => this.state.errors[attr])
+     
   }
 
   render() {
-    const { isAuthenticated, errors, user, touch } =  this.state;
+    const { isAuthenticated, errors, user, touch, id } =  this.state;
     if (isAuthenticated) {
-      return (<Redirect to="/profile" />)
+      return (<Redirect to={`/profile/${id}`}/>)
     }
 
     return (
       <div className="box mx-auto">
         <div className="row">
-          <div className="col-6">
-            <h3>Log in</h3>
+          <div className="col-15">
+            <h3>Entra en tu cuenta</h3>
             <form id="login-form" className="mt-4" onSubmit={this.handleSubmit}>
               <div className="form-group">
-                <label>Email</label>
+                <label>Aquí tu email</label>
                 <input type="email" name="email" className={`form-control ${touch.email && errors.email ? 'is-invalid' : ''}`} onChange={this.handleChange} onBlur={this.handleBlur} value={user.email} />
-                <div className="invalid-feedback">{ errors.email }</div>
+                <div className="invalid-feedback">{errors.email}</div>
               </div>
               <div className="form-group">
-                <label>Password</label>
+                <label>Y aquí la contraseña</label>
                 <input type="password" name="password" className={`form-control ${touch.password && errors.password ? 'is-invalid' : ''}`} onChange={this.handleChange} onBlur={this.handleBlur} value={user.password} />
-                <div className="invalid-feedback">{ errors.password }</div>
+                <div className="invalid-feedback">{errors.password}</div>
               </div>
+
+              <p className="mt-4"><small>Si no tienes cuenta crea una <Link to="/register">AQUÍ</Link></small></p>
+              <button className="login-button" form="login-form" type="submit" disabled={!this.isValid()}> Login</button>
             </form>
-            <p className="mt-4"><small>If you don't have an account yet, you can create your account <Link to="/register">here</Link></small></p>
           </div>
-          <div className="col-6 pt-4">
-            <h5>Hello!!</h5>
-            <p className="lead mb-5">Guayyyyy</p>
-            <p className="mb-2"><small>If you signup, you agree with all our terms and conditions where we can do whatever we want with the data!</small></p>
-            <button className="btn btn-white" form="login-form" type="submit" disabled={!this.isValid()}> Login</button>
-          </div>
+
         </div>
       </div>
     );
   }
 }
-export default withAuthConsumer(Login)
+
+export default withAuthContext(Login)
