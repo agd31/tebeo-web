@@ -10,7 +10,7 @@ const getUser = () => http.get('/profile')
 .then(res => Promise.resolve(res.data));
 
 const logout = () => {
-    return http.get('/logout')
+    return http.post('/logout')
       .then(res => Promise.resolve(res.data));
   }
   

@@ -5,15 +5,15 @@ import { withAuthContext } from '../../contexts/AuthStore';
 
 
  class Navbar extends Component {
-  constructor(props){
-    super(props);
-this.state = {
-  Redirection:false
-}
+  state={
+    Redirection:false
   }
  handleLogout = () => {
   authService.logout() //if redirect state=true
-    .then(res =>this.setState({ Redirection:  true}))
+    .then(res =>{
+      this.setState({Redirection:true})
+      this.props.onUserChange(null)
+    })
   
 }
 
@@ -27,18 +27,17 @@ componentDidMount() {
 
 render() {
   const { Redirection } =  this.state;
-  if (Redirection) {
-    return (<Redirect to="/" />)
-  }
+ 
 
-  const {isAuthenticated, user}=this.props;
-  console.log(this.props)
+  const isAuthenticated=this.props.isAuthenticated();
+  
 
   
   return (
     
-
+    
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      {Redirection && (<Redirect to="/" />)}
     <div className="container">
       <NavLink className="navbar-brand" to="/">Oh-comic!</NavLink>
      
@@ -63,12 +62,16 @@ render() {
           <li className="nav-item">
             <NavLink className="nav-link" to="/about">Webcomic</NavLink>
           </li>
+          {isAuthenticated &&(
           <li className="nav-item">
-            <NavLink className="nav-link" to="/about">Foro</NavLink>
+            <NavLink className="nav-link" to="/foro">Foro</NavLink>
           </li>
+          )}
+          {isAuthenticated &&(
           <li className="nav-item">
             <NavLink className="nav-link" to="/about">Biblioteca</NavLink>
           </li>
+          )}
           <div className="registerUser">
 
           {!isAuthenticated && (

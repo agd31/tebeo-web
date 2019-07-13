@@ -73,12 +73,12 @@ class Login extends Component {
     authService.authenticate(user)
       .then(
         response => {
-          //this.props.onUserLogin(response)
+         
           this.setState({ 
             isAuthenticated: true,
             id: user.id
           })
-          this.props.onUserChange(user)
+          this.props.onUserChange(response)
         },
         error => {
           this.setState({
