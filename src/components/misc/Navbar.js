@@ -36,40 +36,43 @@ render() {
   return (
     
     
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light navbarmod">
       {Redirection && (<Redirect to="/" />)}
     <div className="container">
-      <NavLink className="navbar-brand" to="/">Oh-comic!</NavLink>
+      <NavLink className="navbar-brand" to="/">OH-COMIC!</NavLink>
      
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav mr-auto">
-          <li className="nav-item active">
-            <NavLink className="nav-link" to="/">Home <span className="sr-only">(current)</span></NavLink>
+          
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/comics/americano">AMERICANO</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/comics/americano">Americano</NavLink>
+            <NavLink className="nav-link" to="/comics/Europeo">EUROPEO</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/comics/Europeo">Europeo</NavLink>
+            <NavLink className="nav-link" to="/comics/Manga">MANGA</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/comics/Manga">Manga</NavLink>
+            <NavLink className="nav-link" to="/comics/Amateur">AMATEUR</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/comics/Amateur">Amateur</NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to="/about">Webcomic</NavLink>
+            <NavLink className="nav-link" to="/about">WEBCOMIC</NavLink>
           </li>
           {isAuthenticated &&(
+          
+            <li className="divider-vertical"></li>
+          
+          )}
+          {isAuthenticated &&(
           <li className="nav-item">
-            <NavLink className="nav-link" to="/foro">Foro</NavLink>
+            <NavLink className="nav-link" to="/foro">FORO</NavLink>
           </li>
           )}
           {isAuthenticated &&(
           <li className="nav-item">
-            <NavLink className="nav-link" to="/about">Biblioteca</NavLink>
+            <NavLink className="nav-link" to="/about">BIBLIOTECA</NavLink>
           </li>
           )}
           <div className="registerUser">
@@ -88,7 +91,7 @@ render() {
           
           {isAuthenticated &&(
           <li className="nav-item">
-            <NavLink className="nav-link registerLeft" to="/" title="Usuario" >Nombre</NavLink>
+            <NavLink className="nav-link registerLeft" to="/profile" title="Usuario" >{this.props.user.email}</NavLink>
           </li>
           )}
           {isAuthenticated &&(

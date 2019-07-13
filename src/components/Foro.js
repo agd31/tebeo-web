@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 
-import BaseService from '../services/BaseService.js';
 
 class Home extends Component {
     render() {
@@ -9,8 +8,8 @@ class Home extends Component {
     
     return (
           <div className="container">
-            <h1>Foro</h1>
-            <div></div>
+ 
+            <img src="https://purepng.com/public/uploads/large/under-construction-yom.png"/>
     </div>
     
       );

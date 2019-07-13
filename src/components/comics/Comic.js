@@ -20,7 +20,7 @@ class Comic extends Component {
    if(comic){
 
 return (  <div className="container">
-    <img src={comic.imageURL} className="card-img-top" alt="..." />
+    <img src={comic.imageURL} className="card-img-top" alt={comic.title} />
     <div className="card-body">
       <h5 className="card-title">{comic.title}</h5>
       <p className="card-text">

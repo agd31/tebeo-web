@@ -2,11 +2,7 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 .App-header {
   background-color: #282c34;
@@ -46,4 +42,40 @@ align-items: row;
   to {
     transform: rotate(360deg);
   }
+}
+.card-img-top {
+  margin-top: 5%;
+  width: 20%;
+  height: 20%;
+  object-fit: cover;
+}
+
+.image-head{
+  width: 100%;
+  height: 150px;
+}
+
+.navbar .divider-vertical {
+  height: 50px;
+  margin: 0 9px;
+  border-right: 1px solid #ffffff;
+  border-left: 1px solid #f2f2f2;
+}
+
+.navbar-inverse .divider-vertical {
+  border-right-color: #222222;
+  border-left-color: #111111;
+}
+body{
+  background-color: #B40404;
+  color:white
+}
+.navbar{
+  background-color: #610B0B;
+}
+.nav-link{
+  color:white!important;
+}
+.navbar-brand{
+  color:white!important;
 }
