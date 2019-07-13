@@ -69,11 +69,18 @@ align-items: row;
   border-left-color: #111111;
 }
 body{
-  background-color: #B40404;
-  color:white
+  font-family: 'Bangers', cursive;
+  
 }
 .navbar{
-  background-color: #610B0B;
+  background: rgba(97,11,11,1);
+background: -moz-linear-gradient(left, rgba(97,11,11,1) 0%, rgba(97,11,11,1) 19%, rgba(148,28,28,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(97,11,11,1)), color-stop(19%, rgba(97,11,11,1)), color-stop(100%, rgba(148,28,28,1)));
+background: -webkit-linear-gradient(left, rgba(97,11,11,1) 0%, rgba(97,11,11,1) 19%, rgba(148,28,28,1) 100%);
+background: -o-linear-gradient(left, rgba(97,11,11,1) 0%, rgba(97,11,11,1) 19%, rgba(148,28,28,1) 100%);
+background: -ms-linear-gradient(left, rgba(97,11,11,1) 0%, rgba(97,11,11,1) 19%, rgba(148,28,28,1) 100%);
+background: linear-gradient(to right, rgba(97,11,11,1) 0%, rgba(97,11,11,1) 19%, rgba(148,28,28,1) 100%);
+  
 }
 .nav-link{
   color:white!important;
@@ -84,3 +91,11 @@ body{
   font-family: 'Bangers', cursive;
 }
 
+.SmallComic-image{
+  width: 23%;
+  height: 23%;
+}
+
+.w-33{
+  width: 33% !important;
+}

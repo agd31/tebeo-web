@@ -5,9 +5,14 @@ const showComic = (comic) => http.get(`/comics/${comic}`)
  
  const list = (comic) => http.get('/comics', comic)
  .then(res => Promise.resolve(res.data));
+
+ const showComicAmericano = (comic) => http.get('/comics/americano', comic)
+ .then(res => Promise.resolve(res.data))
+ .catch(error=> console.error('erorrrr'));
  
  
 export default {
     showComic,
  list,
+ showComicAmericano
 }

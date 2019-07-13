@@ -11,6 +11,8 @@ import Home from './components/Home.js';
 import Register from './components/auth/Register.js';
 import Login from './components/auth/Login.js';
 import Foro from './components/Foro.js';
+import ComicAm from './components/comics/ComicAm';
+
 
 
 
@@ -23,6 +25,7 @@ function App() {
       <main className="container">
           <Switch>
             <Route exact path="/"  component={Home}/>
+            <Route exact path="/comics/americano" component={ComicAm}/>
             <Route exact path="/comics/:id" component={Comic} />
             <Route exact path="/register" component={Register}/>
             <Route exact path="/login" component={Login}/>

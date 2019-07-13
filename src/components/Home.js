@@ -10,11 +10,18 @@ class Home extends Component {
        
     
     return (
-          <div className="container">
-            <h1>Holaaaaa</h1>
-            <ComicList/>
-    </div>
-    
+          <div className="container d-flex ">
+            <div className="w-75 ">
+
+                  <ComicList/>
+  
+            </div>
+            <div className="">
+  
+                <div className="width: 100%, height: 500px, background-color:red">hola</div>
+  
+            </div>
+          </div>
       );
     }
 }
