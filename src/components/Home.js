@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import ComicList from '../components/comics/ComicList.js'
+
 
 import BaseService from '../services/BaseService.js';
 
@@ -10,7 +12,7 @@ class Home extends Component {
     return (
           <div className="container">
             <h1>Holaaaaa</h1>
-            <div></div>
+            <ComicList/>
     </div>
     
       );

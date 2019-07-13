@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ComicService from '../../services/ComicService';
-import Comic from './Comic.js'
+import SmallComic from './SmallComic.js'
 
 class ComicList extends Component {
     state = {
@@ -23,7 +23,7 @@ render() {
       <div  className="vista">
       <div>
         {this.state.comics.map((comic, i) => (
-          <Comic {...comic} key={i}/>
+          <SmallComic {...comic} key={i}/>
         ))}
       </div>
       </div>

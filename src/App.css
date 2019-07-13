@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
 .App {
   text-align: center;
 }
@@ -75,7 +77,10 @@ body{
 }
 .nav-link{
   color:white!important;
+  font-family: 'Bangers', cursive;
 }
 .navbar-brand{
   color:white!important;
+  font-family: 'Bangers', cursive;
 }
+
