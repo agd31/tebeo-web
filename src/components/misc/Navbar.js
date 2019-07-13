@@ -16,13 +16,23 @@ this.state = {
     .then(res =>this.setState({ Redirection:  true}))
   
 }
+
+componentDidMount() {
+  authService.getUser()
+    .then(
+        (user) => this.setState({ user: {...this.state.user, ...user} }),
+        (error) => console.error(error)
+      )
+}
+
 render() {
   const { Redirection } =  this.state;
   if (Redirection) {
     return (<Redirect to="/" />)
   }
 
-  const {isAuthenticated}=this.props;
+  const {isAuthenticated, user}=this.props;
+  console.log(this.props)
 
   
   return (
@@ -61,18 +71,24 @@ render() {
           </li>
           <div className="registerUser">
 
-          {isAuthenticated && (
+          {!isAuthenticated && (
           <li className="nav-item">
             <NavLink className="nav-link registerLeft" to="/register">Registro</NavLink>
           </li>
           )}
-          {isAuthenticated && (
+          {!isAuthenticated && (
           <li className="nav-item">
             <NavLink className="nav-link registerLeft" to="/login">Login</NavLink>
           </li>
           )}
           
-          {!isAuthenticated &&(
+          
+          {isAuthenticated &&(
+          <li className="nav-item">
+            <NavLink className="nav-link registerLeft" to="/" title="Usuario" >Nombre</NavLink>
+          </li>
+          )}
+          {isAuthenticated &&(
           <li className="nav-item">
             <NavLink className="nav-link registerLeft" to="/" title="Logout" onClick={this.handleLogout}><i className="fas fa-sign-out-alt fa-lg"></i></NavLink>
           </li>

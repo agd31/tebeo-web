@@ -105,6 +105,8 @@ export default class Register extends Component {
                 <label>Password</label>
                 <input type="password" name="password" className={`form-control ${touch.password && errors.password ? 'is-invalid' : ''}`} onChange={this.handleChange} onBlur={this.handleBlur} value={user.password} />
                 <div className="invalid-feedback">{ errors.password }</div>
+                <button className="btn btn-white" form="register-form" type="submit" disabled={!this.isValid()}> Create the Account</button>
+
               </div>
             </form>
           </div>
@@ -112,8 +114,7 @@ export default class Register extends Component {
             <h5>Hello!!</h5>
             <p className="lead mb-5">Welcome to Oh-Comic!</p>
             <p className="mb-2"><small>If you signup, you agree with all our terms and conditions where we can do whatever we want with the data!</small></p>
-            <button className="btn btn-white" form="register-form" type="submit" disabled={!this.isValid()}> Create the Account</button>
-</div>
+            </div>
         </div>
       </div>
     );

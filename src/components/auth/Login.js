@@ -66,6 +66,8 @@ class Login extends Component {
   }
 
   handleSubmit = (e) => {
+    
+    console.log(this.props)
     e.preventDefault()
     const { user } = this.state
     authService.authenticate(user)
@@ -76,6 +78,7 @@ class Login extends Component {
             isAuthenticated: true,
             id: user.id
           })
+          this.props.onUserChange(user)
         },
         error => {
           this.setState({
@@ -97,6 +100,7 @@ class Login extends Component {
       .some(attr => this.state.errors[attr])
      
   }
+  
 
   render() {
     const { isAuthenticated, errors, user, touch, id } =  this.state;
@@ -108,21 +112,21 @@ class Login extends Component {
       <div className="box mx-auto">
         <div className="row">
           <div className="col-15">
-            <h3>Entra en tu cuenta</h3>
+            <h3>Login</h3>
             <form id="login-form" className="mt-4" onSubmit={this.handleSubmit}>
               <div className="form-group">
-                <label>Aquí tu email</label>
+                <label>Email</label>
                 <input type="email" name="email" className={`form-control ${touch.email && errors.email ? 'is-invalid' : ''}`} onChange={this.handleChange} onBlur={this.handleBlur} value={user.email} />
                 <div className="invalid-feedback">{errors.email}</div>
               </div>
               <div className="form-group">
-                <label>Y aquí la contraseña</label>
+                <label>Password</label>
                 <input type="password" name="password" className={`form-control ${touch.password && errors.password ? 'is-invalid' : ''}`} onChange={this.handleChange} onBlur={this.handleBlur} value={user.password} />
                 <div className="invalid-feedback">{errors.password}</div>
               </div>
 
-              <p className="mt-4"><small>Si no tienes cuenta crea una <Link to="/register">AQUÍ</Link></small></p>
-              <button className="login-button" form="login-form" type="submit" disabled={!this.isValid()}> Login</button>
+              <p className="mt-4"><small>Si no estás registrado, pincha <Link to="/register">aquí</Link></small></p>
+              <button className="login-button btn-primary" form="login-form" type="submit" disabled={!this.isValid()}> Login</button>
             </form>
           </div>
 
