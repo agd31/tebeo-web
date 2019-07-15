@@ -8,7 +8,7 @@ class ComicAm extends Component {
       comic: {
         title: "",
         family: "",
-        imageURL:"",
+        imageURL:""
       },
       errors: {},
       touch: {}

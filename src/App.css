@@ -99,3 +99,27 @@ background: linear-gradient(to right, rgba(97,11,11,1) 0%, rgba(97,11,11,1) 19%,
 .w-33{
   width: 33% !important;
 }
+
+.colizq{
+  margin-top: 10%
+}
+
+.colder{
+  margin-top: 5%;
+  width: 33%;
+  background-color: lightgrey;
+}
+.colder-peq{
+  width: 100%;
+  background-color: lightgrey;
+}
+
+.searchbar{
+  width:80%;
+  margin: 4% auto;
+}
+
+.searchercillo{
+  width:80%;
+  margin: 4% auto;
+}

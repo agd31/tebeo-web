@@ -67,7 +67,7 @@ class Login extends Component {
 
   handleSubmit = (e) => {
     
-    console.log(this.props)
+    
     e.preventDefault()
     const { user } = this.state
     authService.authenticate(user)

@@ -91,7 +91,7 @@ render() {
           
           {isAuthenticated &&(
           <li className="nav-item">
-            <NavLink className="nav-link registerLeft" to="/profile" title="Usuario" >{this.props.user.email}</NavLink>
+            <NavLink className="nav-link registerLeft" to="/profile" title="Usuario" >{this.props.user.name &&(this.props.user.name)}{!this.props.user.name &&(this.props.user.email)}</NavLink>
           </li>
           )}
           {isAuthenticated &&(
@@ -109,3 +109,5 @@ render() {
 }
 
 export default withAuthContext(Navbar)
+
+//fixed-top
