@@ -9,7 +9,7 @@ class Searcher extends Component {
       title: "",
       family: "",
       imageURL: "",
-      tag: [],
+      tags: "",
     },
     errors: {},
     touch: {}
@@ -21,7 +21,7 @@ class Searcher extends Component {
     this.setState({
       comic: {
         ...this.state.comic,
-        [event.target.name]: event.target.value
+        [event.target.name]: event.target.value ?  event.target.value : event.target.name=null
       }
     }, () => {
       console.log(this.state.comic)
@@ -58,8 +58,36 @@ class Searcher extends Component {
             checked={this.state.family}
             onChange={this.handleInputChange} />
         </label>
+        <label>
+          Family <br />
+          Manga  
+          <input
+            name="family"
+            type="checkbox"
+            value="Manga"
+            checked={this.state.family}
+            onChange={this.handleInputChange} />
+        </label>
         <br />
-        
+        <label>
+          Tag <br />
+          Acción  
+          <input
+            name="tags"
+            type="checkbox"
+            value="Accion"
+            checked={this.state.tags}
+            onChange={this.handleInputChange} />
+        </label>
+        <label>
+          Humor  
+          <input
+            name="tags"
+            type="checkbox"
+            value="Humor"
+            checked={this.state.tags}
+            onChange={this.handleInputChange} />
+        </label>
       </form>
         
         <div className="searchercillo d-flex flex-row flex-wrap">
