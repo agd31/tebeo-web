@@ -17,7 +17,7 @@ class Searcher extends Component {
 
   handleInputChange = (event) => {
     console.log(this.state.comic)
-    //lo de paco
+    
     this.setState({
       comic: {
         ...this.state.comic,
@@ -31,7 +31,6 @@ class Searcher extends Component {
       })
       .catch(console.log)
     })
-    //
   }
 
 
