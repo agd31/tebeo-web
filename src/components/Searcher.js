@@ -17,29 +17,31 @@ class Searcher extends Component {
 
   // event.target.isCheked
   handleInputChange = (event) => {
-
-    // console.log(event.target.value)
-    // console.log(this.state.filters[event.target.name])
     
-    if(event.target.checked  ){
+    const { name, checked } = event.target
 
-      this.setState({
-        filters:{...this.state.filters,
-        [event.target.name]:[...this.state.filters[event.target.name],event.target.value]}
+    const [filter, value] = name.split(".")
+
+    const newFilter = checked
+      ? [...this.state.filters[filter], value]
+      : this.state.filters[filter].filter(v => v !== value)
+
+    this.setState({
+      filters: {
+        ...this.state.filters,
+        [filter]: newFilter
+      }
+    })
+  }
+  handleSubmit=(event)=>{
+    event.preventDefault();
+    ComicService.searchComic(this.state.filters)
+    .then(comics => {
         
-      },this.setState(this.state.filteredComics.filter(comic=>{
-        console.log(comic[event.target.name].includes(this.state.filters[event.target.name]))
-        return comic[event.target.name].includes(this.state.filters[event.target.name])
-      })))}
-
-    //   this.setState({
-    //     filteredComics: this.state.comics.filter(comic=>comic[event.target.name]===event.target.value)
-    //   })
-    // }
-    // else{
-    // this.setState({
-    //   filteredComics: this.state.comics.filter(comic=>comic[event.target.name]===event.target.value)
-    // })}
+      this.setState({ comics: comics, filteredComics:comics });
+    })
+    .catch((error)=>console.error(error));
+  
   }
 
 
@@ -55,34 +57,34 @@ class Searcher extends Component {
     // console.log(this.state);
     return (
       <div className="container">
-        <form>
+        {JSON.stringify(this.state.filters)}
+        <form onSubmit={this.handleSubmit}>
         <label>
           Family <br />
           Americano  
           <input
-            name="family"
+            name="family.Americano"
             type="checkbox"
-            value="Americano"
-            checked={this.state.family}
+            checked={this.state.filters.family.includes('Americano')}
             onChange={this.handleInputChange} />
         </label>
         <label>
           Manga  
           <input
-            name="family"
+            name="family.Manga"
             type="checkbox"
             value="Manga"
-            checked={this.state.family}
+            checked={this.state.filters.family.includes('Manga')}
             onChange={this.handleInputChange} />
         </label>
         <br />
         <label>
           Europeo  
           <input
-            name="family"
+            name="family.Europeo"
             type="checkbox"
             value="Europeo"
-            checked={this.state.family}
+            checked={this.state.filters.family.includes('Europeo')}
             onChange={this.handleInputChange} />
         </label>
         <br/>
@@ -90,38 +92,22 @@ class Searcher extends Component {
           Tag <br />
           Acción  
           <input
-            name="tags"
+            name="tags.accion"
             type="checkbox"
-            value="accion"
-            checked={this.state.tags}
+            checked={this.state.filters.tags.includes('accion')}
             onChange={this.handleInputChange} />
         </label>
         <label>
           Humor  
           <input
-            name="tags"
+            name="tags.humor"
             type="checkbox"
-            value="humor"
-            checked={this.state.tags}
+            checked={this.state.filters.tags.includes('humor')}
             onChange={this.handleInputChange} />
         </label>
-      
-  <div className="well well-sm text-center">
-	    <h3>Checkbox:</h3>
-    <div className="dlk-radio btn-group">
-	    <label className="btn btn-success">
-	        <input name="choices[2][]" className="form-control" type="checkbox" value="1"/>
-	        <i className="fa fa-check glyphicon glyphicon-ok"/>
-	        also
-          </label>
-	   <label className="btn btn-default">
-	       <input name="choices[2][]" className="form-control" type="checkbox" value="2" defaultchecked="checked"/>
-	       <i className="fa fa-check glyphicon glyphicon-ok"/>
-	       can
-       </label>
-	   
-    </div>
-</div></form>
+        <button type="submit">Do the thing</button>
+ 
+</form>
         
         <div className="searchercillo d-flex flex-row flex-wrap">
           {this.state.filteredComics === null && <div>Loading...</div>}

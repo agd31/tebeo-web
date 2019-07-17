@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Switch, Route, PrivateRoute  } from 'react-router-dom';
+import { Switch, Route  } from 'react-router-dom';
+import PrivateRoute from './guards/PrivateRoute.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import '../node_modules/fontawesome-react/css/all.min.css';
@@ -36,7 +37,7 @@ function App() {
             <Route exact path="/comics/search" component={Searcher}/>          
             <Route exact path="/comics/:id" component={Comic} />
             <Route exact path="/webcomics" component={Webcomics} />
-            <Route exact path="/biblioteca" component={Biblioteca} />
+            <PrivateRoute exact path="/biblioteca" component={Biblioteca} />
             <Route exact path="/register" component={Register}/>
             <Route exact path="/login" component={Login}/>
             <Route exact path="/foro" component={Foro}/>
