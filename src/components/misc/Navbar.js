@@ -58,7 +58,7 @@ render() {
             <NavLink className="nav-link" to="/comics/Amateur">AMATEUR</NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" to="/about">WEBCOMIC</NavLink>
+            <NavLink className="nav-link" to="/webcomics">WEBCOMIC</NavLink>
           </li>
           {isAuthenticated &&(
           
@@ -72,7 +72,7 @@ render() {
           )}
           {isAuthenticated &&(
           <li className="nav-item">
-            <NavLink className="nav-link" to="/about">BIBLIOTECA</NavLink>
+            <NavLink className="nav-link" to="/biblioteca">BIBLIOTECA</NavLink>
           </li>
           )}
           <div className="registerUser">

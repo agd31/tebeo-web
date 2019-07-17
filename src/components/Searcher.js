@@ -105,7 +105,23 @@ class Searcher extends Component {
             checked={this.state.tags}
             onChange={this.handleInputChange} />
         </label>
-      </form>
+      
+  <div className="well well-sm text-center">
+	    <h3>Checkbox:</h3>
+    <div className="dlk-radio btn-group">
+	    <label className="btn btn-success">
+	        <input name="choices[2][]" className="form-control" type="checkbox" value="1"/>
+	        <i className="fa fa-check glyphicon glyphicon-ok"/>
+	        also
+          </label>
+	   <label className="btn btn-default">
+	       <input name="choices[2][]" className="form-control" type="checkbox" value="2" defaultchecked="checked"/>
+	       <i className="fa fa-check glyphicon glyphicon-ok"/>
+	       can
+       </label>
+	   
+    </div>
+</div></form>
         
         <div className="searchercillo d-flex flex-row flex-wrap">
           {this.state.filteredComics === null && <div>Loading...</div>}

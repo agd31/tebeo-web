@@ -11,7 +11,7 @@ class Home extends Component {
             </div>
             <div className="colder">
                 <div className="colder-peq">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search"/></div>
+        <input class="form-control" type="text" placeholder="Search" aria-label="Search" /></div>
             </div>
           </div>
       );

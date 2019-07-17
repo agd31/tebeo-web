@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-class Home extends Component {
+class Foro extends Component {
     render() {
         
        
@@ -16,4 +16,4 @@ class Home extends Component {
     }
 }
 
-export default Home
+export default Foro

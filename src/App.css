@@ -125,3 +125,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#790000', end
   width:80%;
   margin: 4% auto;
 }
+
+.dlk-radio input[type="radio"],
+.dlk-radio input[type="checkbox"] 
+{
+	margin-left:-99999px;
+	display:none;
+}
+.dlk-radio input[type="radio"] + .fa ,
+.dlk-radio input[type="checkbox"] + .fa {
+     opacity:0.15
+}
+.dlk-radio input[type="radio"]:checked + .fa,
+.dlk-radio input[type="checkbox"]:checked + .fa{
+    opacity:1
+}
+
+.negrita{
+  color:black!important;
+}
+
+.card-unpocomargin{
+  margin-top:15%;
+}
+.card-margen10{
+  margin-top:5%;
+}
+
+.badge-pill{
+  margin:0 1%;
+}
