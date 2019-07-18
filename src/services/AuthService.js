@@ -17,6 +17,14 @@ const logout = () => {
   const addFav = (comic) => http.put('/user/fav', {id:comic})
   .then(res => Promise.resolve(res.data))
   .catch(error=> console.error('error'));
+
+  const addWish = (comic) => http.put('/user/wish', {id:comic})
+  .then(res => Promise.resolve(res.data))
+  .catch(error=> console.error('error'));
+
+  const addHave = (comic) => http.put('/user/owned', {id:comic})
+  .then(res => Promise.resolve(res.data))
+  .catch(error=> console.error('error'));
   
   
   export default {
@@ -24,5 +32,7 @@ const logout = () => {
     authenticate,
     getUser,
     logout,
-    addFav
+    addFav,
+    addWish,
+    addHave
   }

@@ -19,6 +19,20 @@ class Comic extends Component {
       error => console.error(error)
     )
   }
+  handleWish(){
+    AuthService.addWish(this.props.match.params.id)
+    .then(
+      user => console.log(user),
+      error => console.error(error)
+    )
+  }
+  handleOwned(){
+    AuthService.addHave(this.props.match.params.id)
+    .then(
+      user => console.log(user),
+      error => console.error(error)
+    )
+  }
   componentDidMount() {
     ComicService.showComic(this.props.match.params.id)
       .then(
@@ -71,10 +85,10 @@ return (
       <button className="btn btn-warning" onClick={this.handleFavs()}>
         Favorito
         </button>
-      <a href="#" className="btn btn-success">
+      <button className="btn btn-success" onClick={this.handleOwned()}>
         Lo tengo
-      </a>
-      <button className="btn btn-danger" >
+      </button>
+      <button className="btn btn-danger" onClick={this.handleWish()}>
         Lo quiero
       </button>
       <a href={comic.buyURL} target="_blank"  rel="noopener noreferrer">

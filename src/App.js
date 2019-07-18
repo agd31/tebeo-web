@@ -20,6 +20,7 @@ import Login from './components/auth/Login.js';
 import Foro from './components/Foro.js';
 import ComicAm from './components/comics/ComicAm';
 import Searcher from './components/Searcher.js'
+import Prueba from './components/Prueba.js'
 
 
 
@@ -40,7 +41,8 @@ function App() {
             <PrivateRoute exact path="/biblioteca" component={Biblioteca} />
             <Route exact path="/register" component={Register}/>
             <Route exact path="/login" component={Login}/>
-            <Route exact path="/foro" component={Foro}/>
+            <PrivateRoute exact path="/foro" component={Foro}/>
+            <Route exact path="/prueba" component={Prueba}/>
             
           </Switch>
 </main>
