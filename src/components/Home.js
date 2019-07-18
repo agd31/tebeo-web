@@ -1,8 +1,28 @@
 import React, { Component } from 'react';
 import ComicList from '../components/comics/ComicList.js';
-import BaseService from '../services/BaseService.js';
+import ComicService from '../services/ComicService.js';
 
 class Home extends Component {
+  state = {
+    comics: null,
+    filteredComics: null,
+    filters:{
+      family:[],
+      tags:[]
+    },
+    errors: {},
+    touch: {}
+  };
+  searchbar=()=>{
+    
+    ComicService.searchComic(this.state)
+    .then(comics => {
+        
+      this.setState({ comics: comics, filteredComics:comics });
+    })
+    .catch((error)=>console.error(error));
+  
+  }
     render() {      
     return (
           <div className="container d-flex">
@@ -11,7 +31,8 @@ class Home extends Component {
             </div>
             <div className="colder">
                 <div className="colder-peq">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search" /></div>
+        <input class="form-control" type="text" placeholder="Search" onKeyUp="searchbar()"
+        aria-label="Search" /></div>
             </div>
           </div>
       );

@@ -7,7 +7,10 @@ class Comic extends Component {
   state = {
     comic:null,
   }
-
+  
+  handleClick() {
+    this.props.history.goBack()
+  }
   componentDidMount() {
     ComicService.showComic(this.props.match.params.id)
       .then(
@@ -66,7 +69,10 @@ return (
       <a href="#" className="btn btn-danger">
         Lo quiero
       </a>
+    </div><div>
+    <button className="btn btn-primary" onClick={this.handleClick.bind(this)}><i className="fas fa-backward mr-1"></i> Volver</button>
     </div>
+    {/* onClick={this.props.history.goBack()} */}
   </div>
 );
 }else {
