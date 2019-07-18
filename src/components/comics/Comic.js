@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ComicService from '../../services/ComicService';
 import {Link} from 'react-router-dom'
+import AuthService from '../../services/AuthService';
 
 
 class Comic extends Component {
@@ -10,6 +11,13 @@ class Comic extends Component {
   
   handleClick() {
     this.props.history.goBack()
+  }
+  handleFavs(){
+    AuthService.addFav(this.props.match.params.id)
+    .then(
+      user => console.log(user),
+      error => console.error(error)
+    )
   }
   componentDidMount() {
     ComicService.showComic(this.props.match.params.id)
@@ -60,15 +68,19 @@ return (
 
       <p className="card-text">{comic.description}</p>
 
-      <a href="#" className="btn btn-warning">
+      <button className="btn btn-warning" onClick={this.handleFavs()}>
         Favorito
-      </a>
+        </button>
       <a href="#" className="btn btn-success">
         Lo tengo
       </a>
-      <a href="#" className="btn btn-danger">
+      <button className="btn btn-danger" >
         Lo quiero
-      </a>
+      </button>
+      <a href={comic.buyURL} target="_blank"  rel="noopener noreferrer">
+        <img src="https://www.niftybuttons.com/amazon/amazon-button1.png"/>
+
+        </a>
     </div><div>
     <button className="btn btn-primary" onClick={this.handleClick.bind(this)}><i className="fas fa-backward mr-1"></i> Volver</button>
     </div>

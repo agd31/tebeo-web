@@ -13,6 +13,8 @@ const showComic = (comic) => http.get(`/comics/${comic}`)
  const searchComic = (comic = {}) => http.post('/comics/search', comic)
  .then(res => {return res.data})
  .catch(error=> console.error('erorrrr'));
+
+
  
  
 export default {

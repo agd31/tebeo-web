@@ -13,11 +13,16 @@ const logout = () => {
     return http.post('/logout')
       .then(res => Promise.resolve(res.data));
   }
+
+  const addFav = (comic) => http.put('/user/fav', {id:comic})
+  .then(res => Promise.resolve(res.data))
+  .catch(error=> console.error('error'));
   
   
   export default {
     register,
     authenticate,
     getUser,
-    logout
+    logout,
+    addFav
   }
