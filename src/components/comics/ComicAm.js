@@ -1,34 +1,31 @@
-import React, { Component } from 'react';
-import ComicService from '../../services/ComicService';
-import SmallComic from './SmallComic.js'
+import React, { Component } from "react";
+import ComicService from "../../services/ComicService";
+import SmallComic from "./SmallComic.js";
 
 class ComicAm extends Component {
-    state = {
-      comics: [],
-      comic: {
-        title: "",
-        family: "",
-        imageURL:""
-      },
-      errors: {},
-      touch: {}
-    }
-componentDidMount(){
-  ComicService.showComicAmericano()
-    .then(comics=>this.setState({comics}))
-}
-render() {
+  state = {
+    comics: [],
+    comic: {
+      title: "",
+      family: "",
+      imageURL: ""
+    },
+    errors: {},
+    touch: {}
+  };
+  componentDidMount() {
+    ComicService.showComicAmericano().then(comics => this.setState({ comics }));
+  }
+  render() {
     return (
-      
-      <div  className="vista">
+      <div className="vista">
         <div>
           {this.state.comics.map((comic, i) => (
-            <SmallComic comic={comic} key={i}/>
+            <SmallComic comic={comic} key={i} />
           ))}
         </div>
       </div>
-    )
+    );
   }
-
 }
-export default ComicAm
+export default ComicAm;
