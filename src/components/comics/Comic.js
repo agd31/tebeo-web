@@ -48,36 +48,49 @@ class Comic extends Component {
       </p>
     </div>
 </div> */
-
+<div>
         <div className="comiccontainer">
-          <div className="comicimage">
-            <img className="" src={comic.imageURL} alt={comic.title} />
+          <div className="">
+            <img
+              className="comicimage"
+              src={comic.imageURL}
+              alt={comic.title}
+            />
           </div>
 
           <div className="comicficha">
             <div id="rojito">
-            <div><h4 className="tituloficha">{comic.title}</h4></div>
-            <div><img src="https://i.imgur.com/BXle2md.png" className="estrellitafav" onClick={this.handleFavs()}/>
+              <div>
+                <h4 className="tituloficha">{comic.title}</h4>
+              </div>
+              <div>
+                <img
+                  src="https://i.imgur.com/BXle2md.png"
+                  className="estrellitafav"
+                  onClick={this.handleFavs()}
+                />
               </div>
             </div>
-            <div id="grisaceo" >
-              <div id="grisizquierda">
-                <h4 className="">{comic.finished}</h4>
+            <div id="grisaceo1">
+              <h4 className=" ">
+                {comic.tags.map(comic => (
+                  <span className="letrarojo ">{comic} |</span>
+                ))}
+              </h4>
+              <div id="grisaceo2">
+                <div id="grisizquierda">
+                  <h4 className="">{comic.finished}</h4>
 
-                <h4 className=" ">
-                  {comic.tags.map(comic => (
-                    <span className="letrarojo ">{comic} |</span>
-                  ))}
-                </h4>
+                  <h4 className="">Tipo de cómic: {comic.family}</h4>
 
-                <h4 className="">{comic.family}</h4>
-
-                <p className="">{comic.description}</p>
-                <div id="grisderecha">
-                  <h3 className="">
-                    {comic.rating} <i class="fas fa-trophy amber-text" />
-                  </h3>
+                  <p className="">{comic.description}</p>
+                  
                 </div>
+                <div id="grisderecha">
+                    <h3 className="letrarating">
+                      {comic.rating} <i class="fas fa-trophy amber-text" />
+                    </h3>
+                  </div>
               </div>
             </div>
             {/* 
@@ -91,16 +104,20 @@ class Comic extends Component {
               <img src="https://www.niftybuttons.com/amazon/amazon-button1.png" />
             </a> */}
           </div>
-          {/* <div>
-            <button
-              className="btn btn-primary"
-              onClick={this.handleClick.bind(this)}
-            >
-              <i className="fas fa-backward mr-1" /> Volver
-            </i>
-          </div> */}
-
-          {/* onClick={this.props.history.goBack()} */}
+          </div>
+          <div id="botones">
+          <a href={comic.buyURL} target="_blank" rel="noopener noreferrer">
+              <img src="https://www.niftybuttons.com/amazon/amazon-button1.png" />
+            </a>
+            
+            <button className="btn amarillo" onClick={this.handleWish()}>
+              Lo quiero
+            </button>  
+            <button className="btn rojo" onClick={this.handleOwned()}>
+              Añadir a la biblioteca
+            </button>
+          </div>
+          
         </div>
       );
     } else {

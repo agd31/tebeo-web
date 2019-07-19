@@ -81,10 +81,17 @@ p, .letrarojo{
   font-size: 16px;
   margin-left:15px;
 }
+.letrarating{
+  color:rgba(121,0,0,1);
+  font-size: 48px;
+  margin-left:15px;
+}
 
 .tituloficha{
   color:white;
   margin-left:15px;
+  font-size: 48px;
+  margin-top:10px;
   justify-content: center;
 }
 
@@ -189,7 +196,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#790000', end
 }
 #rojito{
   background-color: rgba(121,0,0,1);
-  display:inline-block;
+  display:inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: space-around;
@@ -197,10 +204,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#790000', end
 }
 
 
-#grisaceo{
-  background-color: grey;
-  margin-top: -10px;
-  height: 425px;
+#grisaceo1{
+  background-color: #948c8c;
+  height:85%;
+ 
+  
+}
+#grisaceo2{
+  
+  display:inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+ 
   
 }
 
@@ -208,8 +223,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#790000', end
   display:inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  width:90%;
-  margin: 6% 2%;
+  width:95%;
+  margin: 4% 2%;
+  
 }
 .estrellitafav{
   width:40px;
@@ -218,4 +234,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#790000', end
 #grisizquierda{
   padding-top: 20px;
   padding-left:20px;
+  width:68%;
+}
+#grisderecha{
+  display:inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 4% 0 0 1%;
+}
+.comicimage{
+  width: 350px;
+}
+.rojo{
+  background-color: rgba(121,0,0,1);
+}
+.amarillo{
+  background-color:#ddb505;
 }
