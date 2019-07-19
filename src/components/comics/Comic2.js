@@ -49,16 +49,17 @@ class Comic extends Component {
     </div>
 </div> */
 
-        <div className="comiccontainer">
-          <div className="comicimage">
+        <div className=" d-inline-flex mt-5 comiccontainer">
+          <div className=" ">
             <img className="" src={comic.imageURL} alt={comic.title} />
           </div>
 
-          <div className="comicficha">
+          <div className=" w-33 ">
             <div id="rojito">
-            <div><h4 className="tituloficha">{comic.title}</h4></div>
-            <div><img src="https://i.imgur.com/BXle2md.png" className="estrellitafav" onClick={this.handleFavs()}/>
-              </div>
+              <h4 className="tituloficha">{comic.title}</h4>
+              <button className="btn btn-warning dere" onClick={this.handleFavs()}>
+              Favorito
+            </button>
             </div>
             <div id="grisaceo" >
               <div id="grisizquierda">
@@ -97,7 +98,7 @@ class Comic extends Component {
               onClick={this.handleClick.bind(this)}
             >
               <i className="fas fa-backward mr-1" /> Volver
-            </i>
+            </button>
           </div> */}
 
           {/* onClick={this.props.history.goBack()} */}
