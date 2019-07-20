@@ -20,16 +20,22 @@ class Searcher extends Component {
 
     const [filter, value] = name.split(".");
 
-    const newFilter = checked
-      ? [...this.state.filters[filter], value]
-      : this.state.filters[filter].filter(v => v !== value);
+    let newFilter;
 
-    this.setState({
-      filters: {
-        ...this.state.filters,
-        [filter]: newFilter
-      }
-    });
+    if (this.state.filters[filter] instanceof Array) {
+      newFilter = checked
+        ? [...this.state.filters[filter], value]
+        : this.state.filters[filter].filter(v => v !== value);
+    } else {
+      newFilter = checked
+    }
+
+      this.setState({
+        filters: {
+          ...this.state.filters,
+          [filter]: newFilter
+        }
+      });
   };
   handleSubmit = event => {
     event.preventDefault();
@@ -51,9 +57,9 @@ class Searcher extends Component {
     // console.log(this.state);
     return (
       <div className="container">
-        {JSON.stringify(this.state.filters)}
+        {/* {JSON.stringify(this.state.filters)} */}
         <form onSubmit={this.handleSubmit}>
-          <legend>Género</legend>
+          
           <div
             role="checkbox"
             className="group_checkbox"
@@ -61,7 +67,7 @@ class Searcher extends Component {
             aria-controls="cond1 cond2 cond3"
             tabindex="0"
           >
-            All condiments
+            Géneros
           </div>
           <ul className="checkboxes">
             <li>
@@ -313,54 +319,54 @@ class Searcher extends Component {
               onChange={this.handleInputChange}
             />
           </label>
-          <br />
+          {/* <br />
           <ul className="checkboxes">
             <li>
               <label>
-                Estado
+                Finalizado
                 <input
-                  name="finished.True"
+                  name="finished.true"
                   type="checkbox"
                   id="cond1"
-                  // checked={this.state.filters.finished===True}
+                   checked={this.state.filters.finished===true}
                   onChange={this.handleInputChange}
                 />
               </label>
             </li>
             <li>
               <label>
-                Estado no
+                Sigue editándose
                 <input
-                  name="finished.False"
+                  name="finished.false"
                   type="checkbox"
                   id="cond1"
-                  // checked={this.state.filters.finished===False}  Selector
+                   checked={this.state.filters.finished===false}  
                   onChange={this.handleInputChange}
                 />
               </label>
             </li>
-          </ul>
-          <ul className="checkboxes">
+          </ul> */}
+          {/* <ul className="checkboxes">
             <li>
               <label>
-                Amateur si
+                Amateur
                 <input
-                  name="amateur.True"
+                  name="amateur.true"
                   type="checkbox"
                   id="condamateuryes"
-                  //checked={(this.state.filters.amateurTrue)}
+                  checked={(this.state.filters.amateur===true)}
                   onChange={this.handleInputChange}
                 />
               </label>
             </li>
             <li>
               <label>
-                Amateur no
+                Profesional
                 <input
-                  name="amateur.False"
+                  name="amateur.false"
                   type="checkbox"
                   id="condamateurno"
-                  checked={this.state.filters.amateur}
+                  checked={(this.state.filters.amateur===false)}
                   onChange={this.handleInputChange}
                 />
               </label>
@@ -376,7 +382,7 @@ class Searcher extends Component {
               <option value="4.5">4.5</option>
               <option value="5">5</option>
             </select>
-          </label>
+          </label> */}
           <button type="submit">Do the thing</button>
         </form>
 

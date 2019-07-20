@@ -1,10 +1,6 @@
-
-@import url('https://fonts.googleapis.com/css?family=Bangers&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Bangers&display=swap");
 .App {
-  
 }
-
-
 
 .App-header {
   background-color: #282c34;
@@ -21,21 +17,19 @@
   color: #61dafb;
 }
 
-.registerUser{
-  
- 
+.registerUser {
   border-radius: 10px;
-box-shadow: 0 0 15px #ddd;
-  background-color:rgba(121,0,0,1);
-  display:flex;
+  box-shadow: 0 0 15px #ddd;
+  background-color: rgba(121, 0, 0, 1);
+  display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
-  margin-right:20px;
-  margin-left:260px;
+  margin-right: 20px;
+  margin-left: 260px;
 }
 
-.registerLeft{
-align-items: row;
+.registerLeft {
+  align-items: row;
 }
 
 @keyframes App-logo-spin {
@@ -53,7 +47,7 @@ align-items: row;
   object-fit: cover;
 }
 
-.image-head{
+.image-head {
   width: 100%;
   height: 150px;
 }
@@ -69,227 +63,274 @@ align-items: row;
   border-right-color: #222222;
   border-left-color: #111111;
 }
-body{
-  font-family: 'Bangers', cursive;
-  
+body {
+  font-family: "Bangers", cursive;
 }
-p, .letrarojo{
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+p,
+.letrarojo {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-.letrarojo{
-  color:rgba(121,0,0,1);
+.letrarojo {
+  color: rgba(121, 0, 0, 1);
   font-size: 16px;
-  margin-left:15px;
-  
+  margin-left: 15px;
 }
-.letrarating{
-  color:rgba(121,0,0,1);
+.letrarating {
+  color: rgba(121, 0, 0, 1);
   font-size: 42px;
-  margin-left:10px;
+  margin-left: 10px;
 }
 
-.tituloficha{
-  color:white;
-  margin-left:15px;
+.tituloficha {
+  color: white;
+  margin-left: 15px;
   font-size: 48px;
-  margin-top:10px;
+  margin-top: 10px;
   justify-content: center;
 }
 
-.navbar, .webcomicfondo{
-  background: rgba(121,0,0,1);
-background: -moz-linear-gradient(left, rgba(121,0,0,1) 0%, rgba(212,42,0,1) 100%);
-background: -webkit-gradient(left top, right top, color-stop(0%, rgba(121,0,0,1)), color-stop(100%, rgba(212,42,0,1)));
-background: -webkit-linear-gradient(left, rgba(121,0,0,1) 0%, rgba(212,42,0,1) 100%);
-background: -o-linear-gradient(left, rgba(121,0,0,1) 0%, rgba(212,42,0,1) 100%);
-background: -ms-linear-gradient(left, rgba(121,0,0,1) 0%, rgba(212,42,0,1) 100%);
-background: linear-gradient(to right, rgba(121,0,0,1) 0%, rgba(212,42,0,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#790000', endColorstr='#d42a00', GradientType=1 )
-
- 
+.navbar,
+.webcomicfondo,.colorfooter {
+  background: rgba(121, 0, 0, 1);
+  background: -moz-linear-gradient(
+    left,
+    rgba(121, 0, 0, 1) 0%,
+    rgba(212, 42, 0, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, rgba(121, 0, 0, 1)),
+    color-stop(100%, rgba(212, 42, 0, 1))
+  );
+  background: -webkit-linear-gradient(
+    left,
+    rgba(121, 0, 0, 1) 0%,
+    rgba(212, 42, 0, 1) 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    rgba(121, 0, 0, 1) 0%,
+    rgba(212, 42, 0, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    rgba(121, 0, 0, 1) 0%,
+    rgba(212, 42, 0, 1) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(121, 0, 0, 1) 0%,
+    rgba(212, 42, 0, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#790000', endColorstr='#d42a00', GradientType=1 );
 }
-.nav-link{
-  color:white!important;
-  font-family: 'Bangers', cursive;
+.nav-link {
+  color: white !important;
+  font-family: "Bangers", cursive;
 }
-.navbar-brand{
-  color:white!important;
-  font-family: 'Bangers', cursive;
+.navbar-brand {
+  color: white !important;
+  font-family: "Bangers", cursive;
 }
-.containerSmall{
-  margin-top:50px;
+.containerSmall {
+  margin-top: 50px;
 }
-.containerexpositor{
-  display:flex;
-  flex-direction:column;
+.containerexpositor {
+  display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
-  width:60%;
+  width: 60%;
   margin: 4% 80%;
-  justify-content:space-between;
-  align-items:flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
 }
-.SmallComic-image{
+.SmallComic-image {
   width: 200px;
-  height:320px;
-  margin-right:40px;
-  align-self:flex-end;
+  height: 320px;
+  margin-right: 40px;
+  align-self: flex-end;
 }
-.SmallComic-h5, .SmallComic-title{
- 
-  padding-top:7px;
-  padding-bottom:40px;
+.SmallComic-h5,
+.SmallComic-title {
+  text-align: left !important;
+  margin-top: 10px;
+
   width: 150px;
- 
 }
 
-.w-33{
+.w-33 {
   width: 33% !important;
 }
 
-.colizq{
-  margin-top: 10%
+.colizq {
+  margin-top: 10%;
 }
 
-.colder{
+.colder {
   margin-top: 5%;
   width: 33%;
   background-color: lightgrey;
 }
-.colder-peq{
+.colder-peq {
   width: 100%;
   background-color: lightgrey;
 }
 
-.searchbar{
-  width:80%;
+.searchbar {
+  width: 80%;
   margin: 4% auto;
 }
 
-.searchercillo{
-  width:80%;
+.searchercillo {
+  width: 80%;
   margin: 4% auto;
 }
 
 .dlk-radio input[type="radio"],
-.dlk-radio input[type="checkbox"] 
-{
-	margin-left:-99999px;
-	display:none;
+.dlk-radio input[type="checkbox"] {
+  margin-left: -99999px;
+  display: none;
 }
-.dlk-radio input[type="radio"] + .fa ,
+.dlk-radio input[type="radio"] + .fa,
 .dlk-radio input[type="checkbox"] + .fa {
-     opacity:0.15
+  opacity: 0.15;
 }
 .dlk-radio input[type="radio"]:checked + .fa,
-.dlk-radio input[type="checkbox"]:checked + .fa{
-    opacity:1
+.dlk-radio input[type="checkbox"]:checked + .fa {
+  opacity: 1;
 }
 
-.negrita{
-  color:black!important;
+.negrita {
+  color: black !important;
 }
 
-.card-unpocomargin{
-  margin-top:15%;
+.card-unpocomargin {
+  margin-top: 15%;
 }
-.card-margen10{
-  margin-top:5%;
-}
-
-.badge-pill{
-  margin:0 1%;
+.card-margen10 {
+  margin-top: 5%;
 }
 
-.webcomicp{
+.badge-pill {
+  margin: 0 1%;
+}
+
+.webcomicp {
   text-align: justify;
   margin-top: 15px;
   letter-spacing: -1px;
 }
 
-.logo{
-  height:120px;
+.logo {
+  height: 120px;
 }
-.navbarmod{
-  height:70px
+.navbarmod {
+  height: 70px;
 }
-.nav-item{
-  margin-top:5px;
+.nav-item {
+  margin-top: 5px;
 }
-#rojito{
-  background-color: rgba(121,0,0,1);
-  display:flex;
+#rojito {
+  background-color: rgba(121, 0, 0, 1);
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
- 
+
   width: 100%;
-  justify-content:space-between;
+  justify-content: space-between;
 }
 
-
-#grisaceo1{
+#grisaceo1 {
   background-color: #948c8c;
-  height:85%;
+  height: 85%;
   padding-top: 10px;
- 
-  
 }
-#grisaceo2{
-  
-  display:flex;
+#grisaceo2, .elementos {
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
- 
-  
 }
 
-.comiccontainer{
-  display:flex;
+.comiccontainer {
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  width:95%;
+  width: 95%;
   margin: 4% 2%;
-  justify-content:space-between;
+  justify-content: space-between;
 }
-.estrellitafav{
-  width:40px;
+.estrellitafav {
+  width: 40px;
   margin: 20px 10px;
 }
 
-#grisizquierda{
+#grisizquierda {
   padding-top: 20px;
-  padding-left:20px;
-  width:70%;
+  padding-left: 20px;
+  width: 70%;
 }
-#grisderecha{
-  display:flex;
+#grisderecha {
+  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  width:30%;
-  justify-content:space-between;
+  width: 30%;
+  justify-content: space-between;
   padding: 0 0 0 1%;
-  
-
 }
-.comicimage{
+.comicimage {
   width: 350px;
 }
-.rojo{
-  background-color: rgba(121,0,0,1);
-  color:white;
+.rojo {
+  background-color: rgba(121, 0, 0, 1);
+  color: white;
   font-size: 30px;
 }
-.amarillo{
-  background-color:#ddb505;
-  color:white;
+.amarillo {
+  background-color: #ddb505;
+  color: white;
   font-size: 30px;
 }
-.imagerating{
-  width:50%;
-  margin-top:30px;
+.imagerating {
+  width: 50%;
+  margin-top: 30px;
 }
-.imageAmazon{
-  width:270px
+.imageAmazon {
+  width: 270px;
 }
-.descripcionComic{
-  margin-top:50px;
+.descripcionComic {
+  margin-top: 50px;
+}
+
+
+.containerSmall2 {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 60%;
+}
+.containerexpositor2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  
+  
+  
+}
+.SmallComic-image2 {
+  width: 200px;
+  height: 320px;
+  margin-right: 40px;
+  
+}
+.SmallComic-h5,
+.SmallComic-title {
+  text-align: left !important;
+  margin-top: 10px;
+}
+
+.containerbiblioteca{
+  margin-left:40px
 }

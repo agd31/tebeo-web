@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ComicList from "../components/comics/ComicList.js";
 import ComicService from "../services/ComicService.js";
+import SearchBar from "../components/Searchbar.js"
 
 class Home extends Component {
   state = {
@@ -28,13 +29,7 @@ class Home extends Component {
         </div>
         <div className="colder">
           <div className="colder-peq">
-            <input
-              class="form-control"
-              type="text"
-              placeholder="Search"
-              onKeyUp="searchbar()"
-              aria-label="Search"
-            />
+            {/* <SearchBar/> */}
           </div>
         </div>
       </div>

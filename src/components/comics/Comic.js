@@ -17,13 +17,13 @@ class Comic extends Component {
       error => console.error(error)
     );
   };
-  handleWish() {
+  handleWish=() =>{
     AuthService.addWish(this.props.match.params.id).then(
       user => this.props.onUserChange(user),
       error => console.error(error)
     );
   }
-  handleOwned() {
+  handleOwned=() =>{
     AuthService.addHave(this.props.match.params.id).then(
       user => this.props.onUserChange(user),
       error => console.error(error)

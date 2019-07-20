@@ -1,22 +1,22 @@
 import React, { Component } from "react";
 import ComicList from "./comics/ComicList.js";
-import SmallComic from "./comics/SmallComic.js";
+import SmallComic2 from "./comics/SmallComic2.js";
 import ComicService from "../services/ComicService";
 import AuthService from "../services/AuthService";
+import { withAuthContext } from "../contexts/AuthStore";
 
 
 
 class Biblioteca extends Component {
   state = {
     comics: [],
-    comic: {
-      title: "",
-      family: "",
-      imageURL: ""
-    },
+    cat:"favs",
     errors: {},
     touch: {}
   };
+  handleClick(cat) {
+    this.setState({ cat })
+  }
   componentDidMount() {
     AuthService.getUser()
     .then(user => this.props.onUserChange(user));
@@ -25,28 +25,34 @@ class Biblioteca extends Component {
   }
   render() {
     const { user } = this.props;
-    const { comic } = this.state;
+    const { comics, cat } = this.state;
+    
     let comicFav;
-    if (comic) {
-      comicFav = user.favs.filter(item => {
-        return item === comic._id;
+    if (comics.length) {
+      comicFav = comics.filter(item => {
+        return user[cat].includes(item._id)
       });
     }
     return (
-      <div>
-<div className="vista">
-        <div>
-          {this.state.comicFav.map((comic, i) => (
-            <SmallComic comic={comic} key={i} />
+      
+<div className="containerbiblioteca">
+  <div>
+  <button className="btn amarillo" onClick={() => this.handleClick("favs")}>Favoritos</button>
+  <button className="btn btn-info" onClick={() => this.handleClick("have")}>Tengo</button>
+  <button className="btn rojo" onClick={() => this.handleClick("wish")}>Quiero</button>
+  </div>
+        <div className="elementos" >
+          {comicFav && comicFav.map((comic, i) => (
+            <SmallComic2 comic={comic} key={i} />
           ))}
         </div>
       </div>
-      </div>
+      
     );
   }
 }
 
-export default Biblioteca;
+export default withAuthContext(Biblioteca);
 
 
 {/* <div className="container d-flex">

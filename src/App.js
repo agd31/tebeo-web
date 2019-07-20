@@ -21,6 +21,7 @@ import Foro from "./components/Foro.js";
 import ComicAm from "./components/comics/ComicAm";
 import Searcher from "./components/Searcher.js";
 import Prueba from "./components/Prueba.js";
+import Footer from "./components/misc/Footer.js"
 
 function App() {
   return (
@@ -34,13 +35,14 @@ function App() {
           <Route exact path="/comics/search" component={Searcher} />
           <Route exact path="/comics/:id" component={Comic} />
           <Route exact path="/webcomics" component={Webcomics} />
-          {/* <PrivateRoute exact path="/biblioteca" component={Biblioteca} /> */}
+          <PrivateRoute exact path="/biblioteca" component={Biblioteca} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           <PrivateRoute exact path="/foro" component={Foro} />
           <Route exact path="/prueba" component={Prueba} />
         </Switch>
       </main>
+      <Footer />
     </div>
   );
 }
