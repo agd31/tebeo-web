@@ -19,7 +19,7 @@ class ComicAm extends Component {
   render() {
     return (
       <div className="vista">
-        <div>
+        <div className="d-flex flex-row flex-wrap">
           {this.state.comics.map((comic, i) => (
             <SmallComic comic={comic} key={i} />
           ))}

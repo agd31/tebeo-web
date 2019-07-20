@@ -80,11 +80,12 @@ p, .letrarojo{
   color:rgba(121,0,0,1);
   font-size: 16px;
   margin-left:15px;
+  
 }
 .letrarating{
   color:rgba(121,0,0,1);
-  font-size: 48px;
-  margin-left:15px;
+  font-size: 42px;
+  margin-left:10px;
 }
 
 .tituloficha{
@@ -115,10 +116,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#790000', end
   color:white!important;
   font-family: 'Bangers', cursive;
 }
-
+.containerSmall{
+  margin-top:50px;
+}
+.containerexpositor{
+  display:flex;
+  flex-direction:column;
+  flex-wrap: nowrap;
+  width:60%;
+  margin: 4% 80%;
+  justify-content:space-between;
+  align-items:flex-end;
+}
 .SmallComic-image{
-  width: 23%;
-  height: 23%;
+  width: 200px;
+  height:320px;
+  margin-right:40px;
+  align-self:flex-end;
+}
+.SmallComic-h5, .SmallComic-title{
+ 
+  padding-top:7px;
+  padding-bottom:40px;
+  width: 150px;
+ 
 }
 
 .w-33{
@@ -208,12 +229,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#790000', end
 #grisaceo1{
   background-color: #948c8c;
   height:85%;
+  padding-top: 10px;
  
   
 }
 #grisaceo2{
   
-  display:inline-flex;
+  display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
  
@@ -236,20 +258,38 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#790000', end
 #grisizquierda{
   padding-top: 20px;
   padding-left:20px;
-  width:68%;
+  width:70%;
 }
 #grisderecha{
   display:flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding: 4% 0 0 1%;
+  width:30%;
+  justify-content:space-between;
+  padding: 0 0 0 1%;
+  
+
 }
 .comicimage{
   width: 350px;
 }
 .rojo{
   background-color: rgba(121,0,0,1);
+  color:white;
+  font-size: 30px;
 }
 .amarillo{
   background-color:#ddb505;
+  color:white;
+  font-size: 30px;
+}
+.imagerating{
+  width:50%;
+  margin-top:30px;
+}
+.imageAmazon{
+  width:270px
+}
+.descripcionComic{
+  margin-top:50px;
 }

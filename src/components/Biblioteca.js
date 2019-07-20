@@ -1,11 +1,55 @@
 import React, { Component } from "react";
 import ComicList from "./comics/ComicList.js";
+import SmallComic from "./comics/SmallComic.js";
+import ComicService from "../services/ComicService";
+import AuthService from "../services/AuthService";
+
+
 
 class Biblioteca extends Component {
+  state = {
+    comics: [],
+    comic: {
+      title: "",
+      family: "",
+      imageURL: ""
+    },
+    errors: {},
+    touch: {}
+  };
+  componentDidMount() {
+    AuthService.getUser()
+    .then(user => this.props.onUserChange(user));
+    ComicService.list()
+    .then(comics => this.setState({ comics }));
+  }
   render() {
+    const { user } = this.props;
+    const { comic } = this.state;
+    let comicFav;
+    if (comic) {
+      comicFav = user.favs.filter(item => {
+        return item === comic._id;
+      });
+    }
     return (
       <div>
-        <div className="container d-flex">
+<div className="vista">
+        <div>
+          {this.state.comicFav.map((comic, i) => (
+            <SmallComic comic={comic} key={i} />
+          ))}
+        </div>
+      </div>
+      </div>
+    );
+  }
+}
+
+export default Biblioteca;
+
+
+{/* <div className="container d-flex">
           MODIFICAR LOS FAVORITOS CON UN BOTON DEBAJO Y LOS OTROS DOS
           <div className="w-75 colizq">
             <ComicList />
@@ -79,10 +123,4 @@ class Biblioteca extends Component {
               Aquí los que quiero
             </div>
           </div>
-        </div>
-      </div>
-    );
-  }
-}
-
-export default Biblioteca;
+        </div> */}

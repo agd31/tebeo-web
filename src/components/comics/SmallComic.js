@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const SmallComic = ({ comic }) => {
   const { title, imageURL, _id } = comic;
   return (
-    <div className="">
-      <div className="">
+    <div className="containerSmall">
+      <div className="containerexpositor">
         <div className="">
-          <Link to={`/comics/${_id}`} className="SmallComic-image">
+          <Link to={`/comics/${_id}`} className="">
             {" "}
             <img src={imageURL} className="SmallComic-image" alt={title} />{" "}
           </Link>

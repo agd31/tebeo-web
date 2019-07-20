@@ -34,7 +34,7 @@ function App() {
           <Route exact path="/comics/search" component={Searcher} />
           <Route exact path="/comics/:id" component={Comic} />
           <Route exact path="/webcomics" component={Webcomics} />
-          <PrivateRoute exact path="/biblioteca" component={Biblioteca} />
+          {/* <PrivateRoute exact path="/biblioteca" component={Biblioteca} /> */}
           <Route exact path="/register" component={Register} />
           <Route exact path="/login" component={Login} />
           <PrivateRoute exact path="/foro" component={Foro} />
