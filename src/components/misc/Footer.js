@@ -2,8 +2,8 @@ import React from "react";
 
 const Footer = () => (
 <div>
-  <footer className="page-footer font-small colorfooter lighten-3 pt-4">
-    <div className="container text-center text-md-left">
+  <footer className="page-footer font-small colorfooter px-5 lighten-3 pt-4">
+    <div className=" text-center text-md-left">
       <div className="row">
         <div className="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
           <h5 className="font-weight-bold text-uppercase mb-4">Secciones</h5>

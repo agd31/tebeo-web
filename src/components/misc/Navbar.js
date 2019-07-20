@@ -40,7 +40,7 @@ class Navbar extends Component {
           </NavLink>
         
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
+            <ul className="navbar-nav mr-auto d-flex flex-row">
               <li className="nav-item">
                 <NavLink className="nav-link" to="/comics/americano">
                   AMERICANO
@@ -81,7 +81,9 @@ class Navbar extends Component {
                   </NavLink>
                 </li>
               )}
-              <div className="registerUser">
+              </ul>
+              <div className="registerUser align-self-end">
+              <ul className="navbar-nav mr-auto d-flex flex-row">
                 {!isAuthenticated && (
                   <li className="nav-item">
                     <NavLink className="nav-link registerLeft" to="/register">
@@ -121,8 +123,9 @@ class Navbar extends Component {
                     </NavLink>
                   </li>
                 )}
+                </ul>
               </div>
-            </ul>
+            
           </div>
         </div>
       </nav>

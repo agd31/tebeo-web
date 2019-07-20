@@ -3,14 +3,16 @@ import { queryString } from "query-string";
 
 class SearchBar extends Component {
   state = {
-    searchText: this.props.querySearch.name || "",
+    // searchText: this.props.querySearch.name || "",
+    searchText: this.props.querySearch || "",
     error: true,
     touch: false
   };
 
   handleChange = e => {
     this.setState({
-      [e.target.name]: e.target.value,
+      // [e.target.name]: e.target.value,
+      [e.target]: e.target.value,
       error: e.target.value.length <= 5
     });
   };
@@ -34,32 +36,33 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="SearchBar row mb-4">
-        <div className="col-8">
+      <div className=" row mb-4 SearchBar">
+        <div className="col-12">
           <form onSubmit={this.handleSubmit}>
-            <div className="form-group">
+            <div className="form-group d-flex flex-row flex-nowrap">
               <input
                 type="text"
-                className="form-control"
+                className="form-control w-75 mt-2"
                 name="searchText"
                 autoComplete="off"
                 value={this.state.searchText}
                 onChange={this.handleChange}
                 onBlur={this.handleBlur}
               />
+              <button
+                type="submit"
+                className="btn rojosearch w-25"
+                disabled={this.state.error}
+              >
+                Buscar
+              </button>
 
               {this.state.touch && this.state.error && (
                 <div>Prueba otra vez</div>
               )}
             </div>
-
-            <button
-              type="submit"
-              className="btn btn-primary"
-              disabled={this.state.error}
-            >
-              Buscar
-            </button>
+            <div>
+            </div>
           </form>
         </div>
       </div>

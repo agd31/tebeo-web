@@ -10,7 +10,19 @@ const showComicAmericano = comic =>
   http
     .get("/comics/americano", comic)
     .then(res => Promise.resolve(res.data))
-    .catch(error => console.error("erorrrr"));
+    .catch(error => console.error("error"));
+
+const showComicEuropeo = comic =>
+    http
+      .get("/comics/europeo", comic)
+      .then(res => Promise.resolve(res.data))
+      .catch(error => console.error("error"));
+
+const showComicManga = comic =>
+      http
+        .get("/comics/manga", comic)
+        .then(res => Promise.resolve(res.data))
+        .catch(error => console.error("error"));
 
 const searchComic = (comic = {}) =>
   http
@@ -24,5 +36,7 @@ export default {
   showComic,
   list,
   showComicAmericano,
-  searchComic
+  searchComic,
+  showComicEuropeo,
+  showComicManga
 };

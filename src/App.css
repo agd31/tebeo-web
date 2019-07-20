@@ -24,8 +24,9 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
-  margin-right: 20px;
-  margin-left: 260px;
+  align-self: flex-end;
+  margin-right: 120px;
+  
 }
 
 .registerLeft {
@@ -142,9 +143,8 @@ p,
   flex-direction: column;
   flex-wrap: nowrap;
   width: 60%;
-  margin: 4% 80%;
-  justify-content: space-between;
-  align-items: flex-end;
+  margin: 4% 40%;
+  
 }
 .SmallComic-image {
   width: 200px;
@@ -253,6 +253,16 @@ p,
   flex-wrap: nowrap;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;}
+  .widthfooter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;}
 .comiccontainer {
   display: flex;
   flex-direction: row;
@@ -333,4 +343,20 @@ p,
 
 .containerbiblioteca{
   margin-left:40px
+}
+.SearchBar{
+  margin:2px;
+  margin-top:8px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+}
+.rojosearch{
+  background-color: rgba(121, 0, 0, 1);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
 }

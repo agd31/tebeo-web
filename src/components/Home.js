@@ -29,7 +29,7 @@ class Home extends Component {
         </div>
         <div className="colder">
           <div className="colder-peq">
-            {/* <SearchBar/> */}
+            <SearchBar/>
           </div>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import ComicService from "../../services/ComicService";
-import SmallComic from "./SmallComic.js";
+import ComicService from "../../services/ComicService.js";
+import SmallComic from "./SmallComic.js"
 
-class ComicAm extends Component {
+class ComicEu extends Component {
   state = {
     comics: [],
     comic: {
@@ -14,7 +14,7 @@ class ComicAm extends Component {
     touch: {}
   };
   componentDidMount() {
-    ComicService.showComicAmericano().then(comics => this.setState({ comics }));
+    ComicService.showComicEuropeo().then(comics => this.setState({ comics }));
   }
   render() {
     return (
@@ -28,4 +28,4 @@ class ComicAm extends Component {
     );
   }
 }
-export default ComicAm;
+export default ComicEu;

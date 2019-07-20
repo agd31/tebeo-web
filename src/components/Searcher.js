@@ -69,7 +69,7 @@ class Searcher extends Component {
           >
             Géneros
           </div>
-          <ul className="checkboxes">
+          <ul className="checkboxes list-unstyled">
             <li>
               <label>
                 Americano
