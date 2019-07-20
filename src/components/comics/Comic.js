@@ -88,7 +88,7 @@ class Comic extends Component {
                 </div>
                 <div id="grisderecha">
                     <h3 className="letrarating">
-                      {comic.rating} <i class="fas fa-trophy amber-text" />
+                      {comic.rating} <img src="https://i.imgur.com/Z5pNVJj.png" />
                     </h3>
                   </div>
               </div>
