@@ -7,7 +7,9 @@ class Comic extends Component {
   state = {
     comic: null
   };
-
+  isFav = () => {
+    return this.state.user.fa;
+  };
   handleClick() {
     this.props.history.goBack();
   }
