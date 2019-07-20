@@ -20,9 +20,12 @@ import Login from "./components/auth/Login.js";
 import Foro from "./components/Foro.js";
 import ComicAm from "./components/comics/ComicAm";
 import ComicEu from "./components/comics/ComicEu";
+import ComicMan from "./components/comics/ComicMan";
 import Searcher from "./components/Searcher.js";
 import Prueba from "./components/Prueba.js";
 import Footer from "./components/misc/Footer.js"
+
+
 
 function App() {
   return (
@@ -34,7 +37,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/comics/americano" component={ComicAm} />
           <Route exact path="/comics/europeo" component={ComicEu} />
-          <Route exact path="/comics/manga" component={ComicAm} />
+          <Route exact path="/comics/manga" component={ComicMan} />
           <Route exact path="/comics/search" component={Searcher} />
           <Route exact path="/comics/:id" component={Comic} />
           <Route exact path="/webcomics" component={Webcomics} />

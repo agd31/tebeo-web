@@ -243,7 +243,7 @@ p,
 }
 
 #grisaceo1 {
-  background-color: #948c8c;
+  background-color: lightgrey;
   height: 85%;
   padding-top: 10px;
 }
@@ -359,4 +359,24 @@ p,
   flex-direction: row;
   flex-wrap: nowrap;
 
+}
+
+.rojobiblio {
+  background-color: rgba(121, 0, 0, 1);
+}
+.amarillobiblio {
+  background-color: #ddb505;
+}
+.amarillobiblio, .rojobiblio, .grisbiblio {
+  width:180px;
+  color: white;
+  font-size: 30px;
+}
+.grisbiblio{
+  background-color:lightgrey;
+}
+
+.centerwebcomic{
+  margin-left:auto;
+  margin-right:auto;
 }

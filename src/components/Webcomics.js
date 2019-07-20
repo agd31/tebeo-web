@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Webcomics extends Component {
   render() {
     return (
-      <div className="w-75 card-margen10">
+      <div className="w-75 card-margen10 centerwebcomic">
         <div className="w-75 card text-white bg-info mb-3 webcomicfondo">
           <div className="card-header">Atomic Robo</div>
           <div className="card-body">
