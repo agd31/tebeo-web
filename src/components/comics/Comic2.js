@@ -32,6 +32,7 @@ class Comic extends Component {
     );
   }
   componentDidMount() {
+    
     ComicService.showComic(this.props.match.params.id).then(
       comic => this.setState({ comic: comic }),
       error => console.error(error)

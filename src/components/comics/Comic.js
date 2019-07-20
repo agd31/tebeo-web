@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ComicService from "../../services/ComicService";
 import AuthService from "../../services/AuthService";
+import {withAuthContext} from "../../contexts/AuthStore"
 
 class Comic extends Component {
   state = {
@@ -10,9 +11,9 @@ class Comic extends Component {
   handleClick() {
     this.props.history.goBack();
   }
-  handleFavs() {
+  handleFavs = () => {
     AuthService.addFav(this.props.match.params.id).then(
-      user => console.log(user),
+      user => this.props.onUserChange(user),
       error => console.error(error)
     );
   }
@@ -28,14 +29,25 @@ class Comic extends Component {
       error => console.error(error)
     );
   }
+  
   componentDidMount() {
+    AuthService.getUser().then(
+      user => this.props.onUserChange(user)
+    )
     ComicService.showComic(this.props.match.params.id).then(
       comic => this.setState({ comic: comic }),
       error => console.error(error)
     );
   }
   render() {
+    const {user} = this.props
+    console.log(user.favs)
     const { comic } = this.state;
+    let myComic;
+    if (comic) {myComic = user.favs.filter(item => {
+    
+      return item === comic._id})
+    console.log(myComic)}
     if (comic) {
       return (
         <div>
@@ -54,11 +66,18 @@ class Comic extends Component {
                   <h4 className="tituloficha">{comic.title}</h4>
                 </div>
                 <div>
+                {myComic[0] && 
                   <img
                     src="https://i.imgur.com/BXle2md.png"
                     className="estrellitafav"
-                    onClick={this.handleFavs()}
-                  />
+                    onClick={this.handleFavs}
+                  />}
+                  {!myComic[0] && 
+                  <img
+                    src="https://i.imgur.com/BXle2md.png"
+                    className="estrellitafav"
+                    onClick={this.handleFavs}
+                  />}
                 </div>
               </div>
               <div id="grisaceo1">
@@ -69,10 +88,12 @@ class Comic extends Component {
                 </h4>
                 <div id="grisaceo2">
                   <div id="grisizquierda">
-                    <h4 className="">{comic.finished}</h4>
+                    
 
                     <h4 className="">Tipo de cómic: {comic.family}</h4>
-
+                    <h6 className="">Estado: {(comic.finished)&&("Terminado")}{(!comic.finished)&&("En producción")}</h6>
+                    <h6 className="">{(comic.amateur)&&("Amateur")}</h6>
+                    {myComic[0] && <h6 className=""> "Is favoritas"</h6>}
                     <p className="">{comic.description}</p>
                   </div>
                   <div id="grisderecha">
@@ -105,4 +126,4 @@ class Comic extends Component {
   }
 }
 
-export default Comic;
+export default withAuthContext(Comic);
