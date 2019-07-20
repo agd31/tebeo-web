@@ -380,3 +380,14 @@ p,
   margin-left:auto;
   margin-right:auto;
 }
+
+.centerbanner{
+  margin-left:25%;
+}
+.centerbanner2{
+  margin-left:9%;
+}
+
+.biblioteca-ancho{
+  width:1000px
+}
