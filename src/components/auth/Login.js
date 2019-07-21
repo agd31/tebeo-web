@@ -110,7 +110,7 @@ class Login extends Component {
     }
 
     return (
-      <div className="box mx-auto">
+      <div className="box mx-auto my-5">
         <div className="row">
           <div className="col-15">
             <h3>Login</h3>
@@ -126,8 +126,8 @@ class Login extends Component {
                 <div className="invalid-feedback">{errors.password}</div>
               </div>
 
-              <p className="mt-4"><small>Si no estás registrado, pincha <Link to="/register">aquí</Link></small></p>
-              <button className="login-button btn-primary" form="login-form" type="submit" disabled={!this.isValid()}> Login</button>
+              <p className="mt-4"><small>Si no estás registrado, estás tardando, pincha <Link to="/register">aquí</Link></small></p>
+              <button className="btn rojo" form="login-form" type="submit" disabled={!this.isValid()}> Login</button>
             </form>
           </div>
 

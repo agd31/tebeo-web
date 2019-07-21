@@ -91,7 +91,7 @@ export default class Register extends Component {
 
 
     return (
-      <div className="box mx-auto">
+      <div className="box mx-auto my-5">
         <div className="row">
           <div className="col-6">
             <h3>Sign up</h3>
@@ -105,15 +105,15 @@ export default class Register extends Component {
                 <label>Password</label>
                 <input type="password" name="password" className={`form-control ${touch.password && errors.password ? 'is-invalid' : ''}`} onChange={this.handleChange} onBlur={this.handleBlur} value={user.password} />
                 <div className="invalid-feedback">{ errors.password }</div>
-                <button className="btn btn-white" form="register-form" type="submit" disabled={!this.isValid()}> Create the Account</button>
+                <button className="btn rojo" form="register-form" type="submit" disabled={!this.isValid()}> Registrarse</button>
 
               </div>
             </form>
           </div>
           <div className="col-6 pt-4">
-            <h5>Hello!!</h5>
-            <p className="lead mb-5">Welcome to Oh-Comic!</p>
-            <p className="mb-2"><small>If you signup, you agree with all our terms and conditions where we can do whatever we want with the data!</small></p>
+            <h5>Registro</h5>
+            <p className="lead mb-5">Bienvenido a Oh-Comic!</p>
+            <p className="mb-2"><small>Mediante el registro en nuestra página, das permiso a Oh-Comic! a hacer lo queramos con tus datos y con tus descendientes</small></p>
             </div>
         </div>
       </div>
