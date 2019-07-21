@@ -86,8 +86,8 @@ p,
 .tituloficha {
   color: white;
   margin-left: 15px;
-  font-size: 48px;
-  margin-top: 10px;
+  font-size: 40px;
+  margin-top: 16px;
   justify-content: center;
 }
 
@@ -251,7 +251,7 @@ p,
 
 #grisaceo1 {
   background-color: lightgrey;
-  height: 85%;
+  height: 440px;
   padding-top: 10px;
 }
 #grisaceo2, .elementos {
@@ -298,6 +298,7 @@ p,
 }
 .comicimage {
   width: 350px;
+  height: 520px;
 }
 .rojo {
   background-color: rgba(121, 0, 0, 1);
@@ -314,7 +315,7 @@ p,
   margin-top: 30px;
 }
 .imageAmazon {
-  width: 270px;
+  width: 220px;
 }
 .descripcionComic {
   margin-top: 50px;
