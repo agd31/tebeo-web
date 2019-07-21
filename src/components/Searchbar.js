@@ -54,7 +54,7 @@ class SearchBar extends Component {
                 className="btn rojosearch w-25"
                 disabled={this.state.error}
               >
-                Buscar
+                <i class="fas fa-search"></i>
               </button>
 
               {this.state.touch && this.state.error && (

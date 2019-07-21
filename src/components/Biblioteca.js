@@ -40,7 +40,7 @@ class Biblioteca extends Component {
       <button className="btn grisbiblio" onClick={() => this.handleClick("have")}>Tengo</button>
       <button className="btn rojobiblio" onClick={() => this.handleClick("wish")}>Quiero</button>
     </div>
-    <div className="d-flex flex-row flex-wrap" >
+    <div className="d-flex flex-row flex-wrap ml-5" >
       {comicFav && comicFav.map((comic, i) => (
         <SmallComic2 comic={comic} key={i} />
       ))}

@@ -2,6 +2,11 @@
 .App {
 }
 
+@font-face {
+  font-family: "Britter";
+  src: url('../src/Bitterbrush.OTF');
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -65,7 +70,7 @@
   border-left-color: #111111;
 }
 body {
-  font-family: "Bangers", cursive;
+  font-family: Britter;
 }
 p,
 .letrarojo {
@@ -84,6 +89,7 @@ p,
 }
 
 .tituloficha {
+  font-family: Britter;
   color: white;
   margin-left: 15px;
   font-size: 40px;
@@ -93,6 +99,7 @@ p,
 
 .navbar,
 .webcomicfondo {
+  font-family: Britter;
   background: rgba(121, 0, 0, 1);
   background: -moz-linear-gradient(
     left,
@@ -136,7 +143,7 @@ p,
 }
 .nav-link {
   color: white !important;
-  font-family: "Bangers", cursive;
+  font-family: Britter;
 }
 .navbar-brand {
   color: white !important;
@@ -244,7 +251,7 @@ p,
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-
+  height:79px;
   width: 100%;
   justify-content: space-between;
 }
@@ -382,8 +389,7 @@ p,
 }
 
 .centerwebcomic{
-  margin-left:auto;
-  margin-right:auto;
+  margin-left:22%
 }
 
 .centerbanner{
@@ -393,18 +399,23 @@ p,
 .centerbanner2{
   margin-left:9%;
 }
+.centercomichome{
+  margin-left:12%;
+}
 
 .biblioteca-ancho{
   width:1000px
 }
 
 .heightcard{
-  height:29%;
+  height:19%;
+  /* height:29%; */
 }
 /* 370px; */
 .letragrande{
   font-size:24px
 }
 li{
-  font-size:20px
+  font-size:20px;
+  
 }

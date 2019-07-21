@@ -30,8 +30,7 @@ class Home extends Component {
           <div className="w-75 card text-white bg-info mb-3 webcomicfondo mx-auto mt-5 heightcard">
             <div className="card-header text-center">TOP POPULARES</div>
             <div className="card-body d-flex flex-row justify-content-around bg-grisaceo ">
-              <Link
-                to="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b7a"
+              <a href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b7a"
                 className="mx-1"
               >
                 <img
@@ -39,9 +38,9 @@ class Home extends Component {
                   src="https://images-na.ssl-images-amazon.com/images/I/51L2h8EKe4L._SX362_BO1,204,203,200_.jpg"
                   alt="Atomic Robo"
                 />
-              </Link>
-              <Link
-                to="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b74"
+              </a>
+              <a
+                href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b74"
                 className="mx-1"
               >
                 <img
@@ -49,9 +48,9 @@ class Home extends Component {
                   src="https://images-na.ssl-images-amazon.com/images/I/51MxzXV5B-L._SX353_BO1,204,203,200_.jpg"
                   alt="Atomic Robo"
                 />
-              </Link>
-              <Link
-                to="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b65"
+              </a>
+              <a
+                href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b65"
                 className="mx-1"
               >
                 <img
@@ -59,14 +58,14 @@ class Home extends Component {
                   src="https://images-na.ssl-images-amazon.com/images/I/51UtAAqHDLL._SX352_BO1,204,203,200_.jpg"
                   alt="Atomic Robo"
                 />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="w-75 card text-white bg-info mb-3 webcomicfondo mx-auto mt-5 heightcard">
             <div className="card-header text-center">TOP VALORADOS</div>
             <div className="card-body d-flex flex-row justify-content-around bg-grisaceo">
-              <Link
-                to="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b77"
+              <a
+                href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b77"
                 className="mx-1"
               >
                 <img
@@ -74,9 +73,9 @@ class Home extends Component {
                   src="https://images-na.ssl-images-amazon.com/images/I/51oRjO25MTL._SX345_BO1,204,203,200_.jpg"
                   alt="Atomic Robo"
                 />
-              </Link>
-              <Link
-                to="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b58"
+              </a>
+              <a
+                href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b58"
                 className="mx-1"
               >
                 <img
@@ -84,9 +83,9 @@ class Home extends Component {
                   src="https://images-na.ssl-images-amazon.com/images/I/41DkURvrCaL._SX349_BO1,204,203,200_.jpg"
                   alt="Atomic Robo"
                 />
-              </Link>
-              <Link
-                to="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b55"
+              </a>
+              <a
+                href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b55"
                 className="mx-1"
               >
                 <img
@@ -94,14 +93,14 @@ class Home extends Component {
                   src="https://images-na.ssl-images-amazon.com/images/I/515G1CajMDL._SX354_BO1,204,203,200_.jpg"
                   alt="Atomic Robo"
                 />
-              </Link>
+              </a>
             </div>
           </div>
           <div className="w-75 card text-white bg-info mb-3 webcomicfondo mx-auto mt-5 heightcard">
             <div className="card-header text-center">TOP NOVEDADES</div>
             <div className="card-body d-flex flex-row justify-content-around bg-grisaceo">
-              <Link
-                to="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b7d"
+              <a
+                href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b7d"
                 className="mx-1"
               >
                 <img
@@ -109,9 +108,9 @@ class Home extends Component {
                   src="https://images-na.ssl-images-amazon.com/images/I/61Lsz0OA0sL._SX380_BO1,204,203,200_.jpg"
                   alt="Atomic Robo"
                 />
-              </Link>
-              <Link
-                to="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b71"
+              </a>
+              <a
+                href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b71"
                 className="mx-1"
               >
                 <img
@@ -119,9 +118,9 @@ class Home extends Component {
                   src="https://images-na.ssl-images-amazon.com/images/I/51Z7gEHt-7L._SX323_BO1,204,203,200_.jpg"
                   alt="Atomic Robo"
                 />
-              </Link>
-              <Link
-                to="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b54"
+              </a>
+              <a
+                href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b54"
                 className="mx-1"
               >
                 <img
@@ -129,13 +128,27 @@ class Home extends Component {
                   src="https://images-na.ssl-images-amazon.com/images/I/41wlL2ZOA%2BL._SX373_BO1,204,203,200_.jpg"
                   alt="Atomic Robo"
                 />
-              </Link>
+              </a>
             </div>
           </div>
           </div>  
           <div className="colder">
             <div className="colder-peq">
               <SearchBar />
+            </div>
+            <div className=""><h6 className="centercomichome">Recomendado del mes</h6>
+            <a href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b53">
+            <img
+                  className="p-1 webcomicfondo w-75 centercomichome"
+                  src="https://images-na.ssl-images-amazon.com/images/I/51TQ0IBMEEL._SX373_BO1,204,203,200_.jpg"
+                /></a>
+            </div>
+            <div className="my-3"><h6 className="centercomichome">Recomendado amateur</h6>
+            <a href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b71">
+            <img
+                  className="p-1 webcomicfondo w-75 centercomichome"
+                  src="https://images-na.ssl-images-amazon.com/images/I/51Z7gEHt-7L._SX323_BO1,204,203,200_.jpg"
+                /></a>
             </div>
             <img
               src="https://s3-us-west-2.amazonaws.com/twc.images/images/banners/4159.gif"
