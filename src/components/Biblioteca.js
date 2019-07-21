@@ -34,18 +34,18 @@ class Biblioteca extends Component {
     }
     return (
       
-<div className="containerbiblioteca">
-  <div className=" d-flex flex-row flex-nowrap justify-content-around pt-4 biblioteca-ancho">
-  <button className="btn  amarillobiblio" onClick={() => this.handleClick("favs")}>Favoritos</button>
-  <button className="btn grisbiblio" onClick={() => this.handleClick("have")}>Tengo</button>
-  <button className="btn rojobiblio" onClick={() => this.handleClick("wish")}>Quiero</button>
+  <div className="containerbiblioteca">
+    <div className=" d-flex flex-row  justify-content-around pt-4 biblioteca-ancho">
+      <button className="btn  amarillobiblio" onClick={() => this.handleClick("favs")}>Favoritos</button>
+      <button className="btn grisbiblio" onClick={() => this.handleClick("have")}>Tengo</button>
+      <button className="btn rojobiblio" onClick={() => this.handleClick("wish")}>Quiero</button>
+    </div>
+    <div className="d-flex flex-row flex-wrap" >
+      {comicFav && comicFav.map((comic, i) => (
+        <SmallComic2 comic={comic} key={i} />
+      ))}
+    </div>
   </div>
-        <div className="elementos" >
-          {comicFav && comicFav.map((comic, i) => (
-            <SmallComic2 comic={comic} key={i} />
-          ))}
-        </div>
-      </div>
       
     );
   }

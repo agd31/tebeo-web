@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const SmallComic = ({ comic }) => {
   const { title, imageURL, _id } = comic;
   return (
-    <div className="containerSmall2">
-      <div className="containerexpositor2">
+    <div className="containerSmall2 ">
+      <div className="containerexpositor2 ">
         <div className="">
           <Link to={`/comics/${_id}`} className="">
             {" "}
@@ -14,7 +14,7 @@ const SmallComic = ({ comic }) => {
         </div>
         <div className="">
           <Link to={`/comics/${_id}`} className="SmallComic-title2">
-            <h5 className="SmallComic-h52">{title}</h5>
+            <h5 className="SmallComic-h52 w-75 mt-1">{title}</h5>
           </Link>
         </div>
       </div>
