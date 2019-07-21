@@ -56,11 +56,11 @@ class Navbar extends Component {
                   MANGA
                 </NavLink>
               </li>
-              {/* <li className="nav-item">
-                <NavLink className="nav-link" to="/comics/Amateur">
-                  AMATEUR
+              <li className="nav-item">
+                <NavLink className="nav-link" to="/comics/search">
+                  BUSCADOR
                 </NavLink>
-              </li> */}
+              </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/webcomics">
                   WEBCOMIC

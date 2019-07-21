@@ -27,6 +27,7 @@ import Footer from "./components/misc/Footer.js"
 
 
 
+
 function App() {
   return (
     <div className="App">

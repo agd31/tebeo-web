@@ -372,7 +372,7 @@ p,
   color: white;
   font-size: 30px;
 }
-.grisbiblio{
+.grisbiblio, .bg-grisaceo{
   background-color:lightgrey;
 }
 
@@ -382,7 +382,8 @@ p,
 }
 
 .centerbanner{
-  margin-left:25%;
+  width:100%
+  /* margin-left:20%; */
 }
 .centerbanner2{
   margin-left:9%;
@@ -391,3 +392,8 @@ p,
 .biblioteca-ancho{
   width:1000px
 }
+
+.heightcard{
+  height:29%;
+}
+/* 370px; */
