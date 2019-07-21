@@ -11,7 +11,7 @@ const Footer = () => (
           <ul className="list-unstyled ">
           <li >
             <p >
-              <Link to="http://localhost:3000/comics/americano" className="letranegra">Americano</Link>
+              <a href="http://localhost:3000/comics/americano" className="letranegra">Americano</a>
             </p>
           </li>
           <li>
@@ -132,7 +132,7 @@ const Footer = () => (
 
   
   <div className="footer-copyright text-center py-3">© 2019 Copyright:
-    <a href="https://mdbootstrap.com/education/bootstrap/"> Alvaro Productions</a>
+    <a href="https://disney.es/"> Alvaro Productions</a>
   </div>
 
 
