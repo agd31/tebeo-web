@@ -24,7 +24,7 @@
 
 .registerUser {
   border-radius: 10px;
-  box-shadow: 0 0 15px #ddd;
+  box-shadow: 0 0 15px rgba(121, 0, 0, 1);
   background-color: rgba(121, 0, 0, 1);
   display: flex;
   flex-flow: row nowrap;
@@ -61,6 +61,12 @@
 .navbar .divider-vertical {
   height: 50px;
   margin: 0 9px;
+  border-right: 1px solid #ffffff;
+  border-left: 1px solid #f2f2f2;
+}
+.navbar .divider-vertical2 {
+  height: 35px;
+  margin: 8px 9px 0 9px;
   border-right: 1px solid #ffffff;
   border-left: 1px solid #f2f2f2;
 }
@@ -397,7 +403,8 @@ p,
   /* margin-left:20%; */
 }
 .centerbanner2{
-  margin-left:9%;
+  margin-left:11%;
+  width: 55%;
 }
 .centercomichome{
   margin-left:12%;
@@ -408,8 +415,8 @@ p,
 }
 
 .heightcard{
-  height:19%;
-  /* height:29%; */
+  /* height:19%; */
+  height:29%;
 }
 /* 370px; */
 .letragrande{
@@ -418,4 +425,12 @@ p,
 li{
   font-size:20px;
   
+}
+
+.card-header{
+  font-size:24px;
+}
+
+.alturagris{
+  height:1170px
 }

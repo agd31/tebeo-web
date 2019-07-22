@@ -132,28 +132,35 @@ class Home extends Component {
             </div>
           </div>
           </div>  
-          <div className="colder">
-            <div className="colder-peq">
+          <div className="colder alturagris">
+            <div className="colder-peq ">
               <SearchBar />
             </div>
             <div className=""><h6 className="centercomichome">Recomendado del mes</h6>
             <a href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b53">
             <img
-                  className="p-1 webcomicfondo w-75 centercomichome"
+                  className=" webcomicfondo w-75 centercomichome mb-3"
                   src="https://images-na.ssl-images-amazon.com/images/I/51TQ0IBMEEL._SX373_BO1,204,203,200_.jpg"
                 /></a>
             </div>
-            <div className="my-3"><h6 className="centercomichome">Recomendado amateur</h6>
+            <div className="my-5"><h6 className="centercomichome">Recomendado amateur</h6>
             <a href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b71">
             <img
-                  className="p-1 webcomicfondo w-75 centercomichome"
+                  className=" webcomicfondo w-75 centercomichome mb-3"
                   src="https://images-na.ssl-images-amazon.com/images/I/51Z7gEHt-7L._SX323_BO1,204,203,200_.jpg"
                 /></a>
             </div>
+            <div className=""><h6 className="centercomichome">Revelación</h6>
+            <a href="http://localhost:3000/comics/5d2df81c5da3d83abcbd9b51">
             <img
+                  className=" webcomicfondo w-75 centercomichome mb-3"
+                  src="https://images-na.ssl-images-amazon.com/images/I/61BX5qX11bL._SX375_BO1,204,203,200_.jpg"
+                /></a>
+            </div>
+            {/* <img
               src="https://s3-us-west-2.amazonaws.com/twc.images/images/banners/4159.gif"
               className="centerbanner"
-            />
+            /> */}
           </div>
         </div>
         <img

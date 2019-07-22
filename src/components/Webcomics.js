@@ -5,8 +5,8 @@ class Webcomics extends Component {
     return (
       <div className="w-75 card-margen10 centerwebcomic">
         <div className="w-75 card text-white bg-info mb-3 webcomicfondo">
-          <div className="card-header">Atomic Robo</div>
-          <div className="card-body">
+          <div className="card-header text-center">Atomic Robo</div>
+          <div className="card-body bg-grisaceo">
             <a href="http://www.atomic-robo.com/" target="_blank">
               <img
                 className="card-img"
@@ -14,7 +14,7 @@ class Webcomics extends Component {
                 alt="Atomic Robo"
               />
             </a>
-            <p className="card-text text-white webcomicp">
+            <p className="card-text text-black webcomicp">
               Un genial ejemplo de Dieselpunk con fantasía, noir, acción,
               misterio, etc. Antes había que pagar para conseguir este cómic.
               Hoy en día podemos leerlo gratis gracias a que han cambiado su
@@ -26,8 +26,8 @@ class Webcomics extends Component {
 
         <div className="w-75 card-margen10">
           <div className=" card text-white bg-info mb-3 webcomicfondo">
-            <div className="card-header">Gone with the Blastwave</div>
-            <div className="card-body">
+            <div className="card-header text-center">Gone with the Blastwave</div>
+            <div className="card-body bg-grisaceo">
               <a href="http://www.blastwave-comic.com/" target="_blank">
                 <img
                   className="card-img"
@@ -35,7 +35,7 @@ class Webcomics extends Component {
                   alt="Gone with the Blastwave"
                 />
               </a>
-              <p className="card-text text-white webcomicp">
+              <p className="card-text text-black webcomicp">
                 Un mundo post-apocalíptico y una guerra que recuerda demasiado a
                 un videojuego. Pero la historia es más una comedia que un drama.
                 Últimamente se está actualizando con regularidad, pero en el
@@ -46,8 +46,8 @@ class Webcomics extends Component {
         </div>
         <div className="w-75 card-margen10">
           <div className=" card text-white bg-info mb-3 webcomicfondo">
-            <div className="card-header">Cyanide and Happiness</div>
-            <div className="card-body">
+            <div className="card-header text-center">Cyanide and Happiness</div>
+            <div className="card-body bg-grisaceo">
               <a href="http://explosm.net/" target="_blank">
                 <img
                   className="card-img"
@@ -55,7 +55,7 @@ class Webcomics extends Component {
                   alt="Cyanide and Happiness"
                 />
               </a>
-              <p className="card-text text-white webcomicp">
+              <p className="card-text text-black webcomicp">
                 Con un humor negro terrible y un cinismo incomparable. Cyanide
                 and Happiness ha sabido ganarse un rincón en el corazón de la
                 Internet. Es seguro que en más de una ocasión has visto alguno
@@ -66,8 +66,8 @@ class Webcomics extends Component {
         </div>
         <div className="w-75 card-margen10">
           <div className=" card text-white bg-info mb-3 webcomicfondo">
-            <div className="card-header">Dresden Codak</div>
-            <div className="card-body">
+            <div className="card-header text-center">Dresden Codak</div>
+            <div className="card-body bg-grisaceo">
               <a href="http://dresdencodak.com/" target="_blank">
                 <img
                   className="card-img"
@@ -75,7 +75,7 @@ class Webcomics extends Component {
                   alt="Dresden Codak"
                 />
               </a>
-              <p className="card-text text-white webcomicp">
+              <p className="card-text text-black webcomicp">
                 Dresden Codak es un webcomic que ha pasado por varias etapas,
                 pero todas ellas han sido maravillosas. Lo que Aaron diaz ha
                 logrado con este webcómic es asombroso y fascinante. Se trata
@@ -86,8 +86,8 @@ class Webcomics extends Component {
         </div>
         <div className="w-75 card-margen10">
           <div className=" card text-white bg-info mb-3 webcomicfondo">
-            <div className="card-header">Girl Genius</div>
-            <div className="card-body">
+            <div className="card-header text-center">Girl Genius</div>
+            <div className="card-body bg-grisaceo">
               <a
                 href="http://www.girlgeniusonline.com/comic.php"
                 target="_blank"
@@ -98,7 +98,7 @@ class Webcomics extends Component {
                   alt="Girl Genius"
                 />
               </a>
-              <p className="card-text text-white webcomicp">
+              <p className="card-text text-black webcomicp">
                 Un webcomic que se ha ganado multitud de premios y
                 reconocimientos. Si te atrae la estética steampunk en lo más
                 mínimo, no puedes dejar de darle un ojo.
@@ -108,8 +108,8 @@ class Webcomics extends Component {
         </div>
         <div className="w-75 card-margen10">
           <div className=" card text-white bg-info mb-3 webcomicfondo">
-            <div className="card-header">JagoDibuja</div>
-            <div className="card-body">
+            <div className="card-header text-center">JagoDibuja</div>
+            <div className="card-body bg-grisaceo">
               <a href="http://www.jagodibuja.com/" target="_blank">
                 <img
                   className="card-img"
@@ -117,7 +117,7 @@ class Webcomics extends Component {
                   alt="JagoDibuja"
                 />
               </a>
-              <p className="card-text text-white webcomicp">
+              <p className="card-text text-black webcomicp">
                 Mejor conocido por su webcomic “Living with Hipstergirl y
                 Gamergirl,” Jago ha sabido extender su fama para convertir su
                 sitio web en el centro de muchos diferentes y buenos cómics. Si
@@ -127,10 +127,10 @@ class Webcomics extends Component {
             </div>
           </div>
         </div>
-        <div className="w-75 card-margen10">
+        <div className="w-75 card-margen10 mb-5">
           <div className=" card text-white bg-info mb-3 webcomicfondo">
-            <div className="card-header">Saturday Morning Breakfast Cereal</div>
-            <div className="card-body">
+            <div className="card-header text-center ">Saturday Morning Breakfast Cereal</div>
+            <div className="card-body bg-grisaceo">
               <a href="https://www.smbc-comics.com/" target="_blank">
                 <img
                   className="card-img"
@@ -138,7 +138,7 @@ class Webcomics extends Component {
                   alt="Saturday Morning Breakfast Cereal"
                 />
               </a>
-              <p className="card-text text-white webcomicp">
+              <p className="card-text text-black webcomicp">
                 Está lleno de ideas geniales, preguntas desafiantes, y conceptos
                 fascinantes. Y todo ello dentro de una absoluta comedia.
                 Últimamente (desde la victoria de Trump) se centra mucho en

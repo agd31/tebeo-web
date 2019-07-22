@@ -91,6 +91,7 @@ class Navbar extends Component {
                     </NavLink>
                   </li>
                 )}
+                {!isAuthenticated && <li className="divider-vertical2" />}
                 {!isAuthenticated && (
                   <li className="nav-item">
                     <NavLink className="nav-link registerLeft" to="/login">
@@ -111,6 +112,7 @@ class Navbar extends Component {
                     </NavLink>
                   </li>
                 )}
+                {isAuthenticated && <li className="divider-vertical2" />}
                 {isAuthenticated && (
                   <li className="nav-item">
                     <NavLink
