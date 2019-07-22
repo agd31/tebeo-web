@@ -19,7 +19,8 @@
 }
 
 .App-link {
-  color: #61dafb;
+  
+  color: rgba(121, 0, 0, 1)!important;
 }
 
 .registerUser {
@@ -92,6 +93,7 @@ p,
   color: rgba(121, 0, 0, 1);
   font-size: 42px;
   margin-left: 10px;
+  font-family: "Bangers", cursive;
 }
 
 .tituloficha {
@@ -174,10 +176,10 @@ p,
 }
 .SmallComic-h5,
 .SmallComic-title {
-  text-align: left !important;
+  
   margin-top: 10px;
 
-  width: 150px;
+ 
 }
 
 .w-33 {
@@ -331,7 +333,7 @@ p,
   width: 220px;
 }
 .descripcionComic {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 
@@ -353,11 +355,7 @@ p,
   margin-right: 40px;
   
 }
-.SmallComic-h5,
-.SmallComic-title {
-  text-align: left !important;
-  margin-top: 10px;
-}
+
 
 .containerbiblioteca{
   margin-left:40px
@@ -433,4 +431,9 @@ li{
 
 .alturagris{
   height:1170px
+}
+.SmallComic-h52, .SmallComic-h5{
+  color: darkslategray;
+ 
+
 }

@@ -14,7 +14,7 @@ const SmallComic = ({ comic }) => {
         </div>
         <div className="">
           <Link to={`/comics/${_id}`} className="SmallComic-title2">
-            <h5 className="SmallComic-h52 w-75 mt-1">{title}</h5>
+            <h5 className="SmallComic-h52 w-75 mt-1 text-center">{title}</h5>
           </Link>
         </div>
       </div>
